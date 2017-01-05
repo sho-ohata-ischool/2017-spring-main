@@ -14,11 +14,11 @@ Understanding language is fundamental to human interaction. Our brains have evol
 
 **Live Sessions:**
 * Monday 6:30p - 8p Pacific ([James Kunz](mailto:jkunz@ischool.berkeley.edu))
-* Wednesday 6:30p - 8p Pacific ([Ian Tenney](mailto:iftenney@ischool.berkeley.edu))
+* Tuesday 6:30p - 8p Pacific ([Ian Tenney](mailto:iftenney@ischool.berkeley.edu))
 * Friday 4p - 5:30p Pacific ([James Kunz](mailto:jkunz@ischool.berkeley.edu))
 
 **Office Hours:**
-* TBD
+* TBD - please enter your preferences in the [poll](http://doodle.com/poll/679ybxc3w96umfpu)
 
 **Course Assistant:**
 * [Drew Plant](mailto:drewplant@berkeley.edu)
@@ -81,7 +81,7 @@ A few useful papers that don’t fit under a particular week. All optional, but 
 
 ## Schedule and Readings
 
-We'll update the table below with assignments as the become available, as well as additional materials throughout the quarter. Keep an eye on GitHub for updates!
+We'll update the table below with assignments as they become available, as well as additional materials throughout the quarter. Keep an eye on GitHub for updates!
 
 <table>
 <tr>
