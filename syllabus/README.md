@@ -71,6 +71,14 @@ We’ll be posting materials to the course [GitHub repo](../../../).
 
 *Note:* this is a new class, and the syllabus below might be subject to change. We'll be sure to announce anything major on [Piazza](http://piazza.com/berkeley/spring2017/datasciw266).
 
+## Code References
+
+The course will be taught in Python, and we'll be making heavy use of NumPy, TensorFlow, and Jupyter (IPython) notebooks. We'll also be using Git for distributing and submitting materials. If you want to brush up on any of these, we recommend:
+* **Git tutorials:** [Introduction / Cheat Sheet](https://git-scm.com/docs/gittutorial), or [interactive tutorial](https://try.github.io/)
+* **Python / NumPy:** Stanford's CS231n has [an excellent tutorial](http://cs231n.github.io/python-numpy-tutorial/)
+* **TensorFlow:** We'll go over the basics of TensorFlow in [Assignment 1](../../../tree/master/assignment/a1/). You can also check out the [tutorials](https://www.tensorflow.org/get_started/) on the TensorFlow website, but these can be somewhat confusing if you're not familiar with the underlying models.
+
+
 ## Misc. Deep Learning and NLP References
 A few useful papers that don’t fit under a particular week. All optional, but interesting!
 * (optional) [Chris Olah’s blog](http://colah.github.io/)
