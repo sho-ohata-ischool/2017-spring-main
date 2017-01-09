@@ -40,7 +40,7 @@ Your grade will be determined as follows:
 * **Assignments**: 50%
 * **Final Project**: 40%
 
-There will be a number of smaller [assignments](../../../tree/master/assignment/) throughout the term for you to
+There will be a number of smaller [assignments](../assignment/) throughout the term for you to
 exercise what you learned in async and live sessions. Some assignments may be more difficult than others, and will be weighted accordingly.
 
 Participation will be graded holistically, based on live session attendance and participation as well as participation on Piazza. (Don’t stress about this part.)
@@ -60,7 +60,7 @@ We don't anticipate granting extensions beyond these policies.  Plan your time a
 If you run into a more serious issue that will affect your ability to complete the course, please contact the instructors and MIDS student services.  A word of warning though: in previous sections, we have had students ask for INC grades because their lives were otherwise busy.  Mostly we have declined, opting instead for the student to complete the course to the best of their ability and have a grade assigned based on that work.  (MIDS prefers to avoid giving INCs, as they have been abused in the past.)
 
 ## Final Project
-*See the [Final Project Guidelines](../../../tree/master/project/)*
+*See the [Final Project Guidelines](../project/)*
 
 ## Course Resources
 We are not using any particular textbook for this course. We’ll list some relevant readings each week. Here are some general resources:
@@ -99,7 +99,7 @@ We'll update the table below with assignments as they become available, as well 
 <th>Materials</th>
 </tr>
 <tr><!--- Week 1 -->
-  <td><strong>Week&nbsp;1</strong><br>(Jan.&nbsp;8&nbsp;-&nbsp;14)</td>
+  <td><strong>Week&nbsp;1</strong><br>(Jan.&nbsp;9&nbsp;-&nbsp;15)</td>
   <td>Introduction</td>
   <td><ul>
     <li>Overview of NLP applications
@@ -115,16 +115,17 @@ We'll update the table below with assignments as they become available, as well 
   </ul></td>
 </tr>
 <tr><!--- Week 1 Assignment -->
-  <td><strong>Assignment&nbsp;0</strong><br><em>due&nbsp;Jan.&nbsp;15</em></td>
+  <td><strong><a href="../assignment/a0" target="_blank">Assignment&nbsp;0</a></strong>
+  <br>due&nbsp;Jan.&nbsp;15</td>
   <td><strong>Course Set-up</strong></td>
   <td><ul>
     <li>GitHub
     <li>Google Cloud
   </ul></td>
-  <td><em>Link to-be-released</em></td>
+  <td><a href="../assignment/a0" target="_blank">Assignment 0</a></td>
 </tr>
 <tr><!--- Week 2 -->
-  <td><strong>Week&nbsp;2</strong><br>(Jan.&nbsp;15&nbsp;-&nbsp;21)</td>
+  <td><strong>Week&nbsp;2</strong><br>(Jan.&nbsp;16&nbsp;-&nbsp;22)</td>
   <td>Language Modeling I</td>
   <td><ul>
     <li>LM applications
@@ -139,17 +140,17 @@ We'll update the table below with assignments as they become available, as well 
   </ul></td>
 </tr>
 <tr><!--- Week 2 Assignment -->
-  <td><strong>Assignment&nbsp;1</strong><br><em>due&nbsp;Jan.&nbsp;22</em></td>
+  <td><strong><a href="../assignment/a1" target="_blank">Assignment&nbsp;1</a></strong>
+  <br>due&nbsp;Jan.&nbsp;22</td>
   <td><strong>Background and TensorFlow</strong></td>
   <td><ul>
-    <li>Dynamic Programming
     <li>Information Theory
     <li>TensorFlow tutorial
   </ul></td>
-  <td><em>Link to-be-released</em></td>
+  <td><a href="../assignment/a1" target="_blank">Assignment 1</a></td>
 </tr>
 <tr><!--- Week 3 -->
-  <td><strong>Week&nbsp;3</strong><br>(Jan.&nbsp;22&nbsp;-&nbsp;28)</td>
+  <td><strong>Week&nbsp;3</strong><br>(Jan.&nbsp;23&nbsp;-&nbsp;29)</td>
   <td>Clusters and Distributions</td>
   <td><ul>
   <li>Representations of meaning
@@ -166,7 +167,7 @@ We'll update the table below with assignments as they become available, as well 
   </ul></td>
 </tr>
 <tr><!--- Week 4 -->
-  <td><strong>Week&nbsp;4</strong><br>(Jan.&nbsp;29&nbsp;-&nbsp;Feb.&nbsp;4)</td>
+  <td><strong>Week&nbsp;4</strong><br>(Jan.&nbsp;30&nbsp;-&nbsp;Feb.&nbsp;5)</td>
   <td>Language Modeling II</td>
   <td><ul>
   <li>Neural Net LMs
@@ -182,8 +183,15 @@ We'll update the table below with assignments as they become available, as well 
   <li>Optional / fun: <a href="http://playground.tensorflow.org/" target="_blank">Tensorflow Playground</a>
   </ul></td>
 </tr>
+<tr><!--- Week 3-4 Assignment -->
+  <td><strong>Assignment&nbsp;2</strong>
+  <br>due&nbsp;Feb.&nbsp;5</td>
+  <td><strong>n-grams and Word Embeddings</strong></td>
+  <td></td>
+  <td><em>To be released</em></td>
+</tr>
 <tr><!--- Week 5 -->
-  <td><strong>Week&nbsp;5</strong><br>(Feb.&nbsp;5&nbsp;-&nbsp;11)</td>
+  <td><strong>Week&nbsp;5</strong><br>(Feb.&nbsp;6&nbsp;-&nbsp;12)</td>
   <td>Basics of Text Processing</td>
   <td><ul>
   <li>Edit distance for strings
@@ -196,8 +204,15 @@ We'll update the table below with assignments as they become available, as well 
   <li>Read: <a href="http://www.dgillick.com/resource/sbd_naacl_2009.pdf" target="_blank">Sentence Boundary Detection and the Problem with the U.S.</a>
   </ul></td>
 </tr>
+<tr><!--- Project Proposal -->
+  <td><strong><a href="../project/#project-proposal" target="_blank">Project&nbsp;Proposal</a></strong>
+  <br>due&nbsp;Feb.&nbsp;12</td>
+  <td></td>
+  <td></td>
+  <td><a href="../project" target="_blank">Final Project Guidelines</a></td>
+</tr>
 <tr><!--- Week 6 -->
-  <td><strong>Week&nbsp;6</strong><br>(Feb.&nbsp;12&nbsp;-&nbsp;18)</td>
+  <td><strong>Week&nbsp;6</strong><br>(Feb.&nbsp;13&nbsp;-&nbsp;19)</td>
   <td>Information Retrieval</td>
   <td><ul>
   <li>Building a Search Index
@@ -213,7 +228,7 @@ We'll update the table below with assignments as they become available, as well 
   </ul></td>
 </tr>
 <tr><!--- Week 7 -->
-  <td><strong>Week&nbsp;7</strong><br>(Feb.&nbsp;19&nbsp;-&nbsp;25)</td>
+  <td><strong>Week&nbsp;7</strong><br>(Feb.&nbsp;20&nbsp;-&nbsp;26)</td>
   <td>Part-of-Speech Tagging I</td>
   <td><ul>
   <li>Tag sets
@@ -225,7 +240,7 @@ We'll update the table below with assignments as they become available, as well 
   </ul></td>
 </tr>
 <tr><!--- Week 8 -->
-  <td><strong>Week&nbsp;8</strong><br>(Feb.&nbsp;26&nbsp;-&nbsp;Mar.&nbsp;4)</td>
+  <td><strong>Week&nbsp;8</strong><br>(Feb.&nbsp;27&nbsp;-&nbsp;Mar.&nbsp;5)</td>
   <td>Part-of-Speech Tagging II</td>
   <td><ul>
   <li>Feature engineering
@@ -238,7 +253,7 @@ We'll update the table below with assignments as they become available, as well 
   </ul></td>
 </tr>
 <tr><!--- Week 9 -->
-  <td><strong>Week&nbsp;9</strong><br>(Mar.&nbsp;5&nbsp;-&nbsp;11)</td>
+  <td><strong>Week&nbsp;9</strong><br>(Mar.&nbsp;6&nbsp;-&nbsp;12)</td>
   <td>Dependency Parsing</td>
   <td><ul>
   <li>Dependency trees
@@ -250,7 +265,7 @@ We'll update the table below with assignments as they become available, as well 
   </ul></td>
 </tr>
 <tr><!--- Week 10 -->
-  <td><strong>Week&nbsp;10</strong><br>(Mar.&nbsp;12&nbsp;-&nbsp;18)</td>
+  <td><strong>Week&nbsp;10</strong><br>(Mar.&nbsp;13&nbsp;-&nbsp;19)</td>
   <td>Constituency Parsing</td>
   <td><ul>
   <li>Context-free grammars (CFGs)
@@ -264,7 +279,7 @@ We'll update the table below with assignments as they become available, as well 
   <!-- </ul></td>      -->
 </tr>
 <tr><!--- Week 11 -->
-  <td><strong>Week&nbsp;11</strong><br>(Mar.&nbsp;19&nbsp;-&nbsp;25)</td>
+  <td><strong>Week&nbsp;11</strong><br>(Mar.&nbsp;20&nbsp;-&nbsp;26)</td>
   <td>Entities</td>
   <td><ul>
   <li>From syntax to semantics
@@ -276,11 +291,11 @@ We'll update the table below with assignments as they become available, as well 
   </ul></td>
 </tr>
 <tr><!--- Spring Break -->
-  <td><strong>Spring Break</strong><br>(Mar.&nbsp;26&nbsp;-&nbsp;Apr.&nbsp;1)</td>
+  <td><strong>Spring Break</strong><br>(Mar.&nbsp;27&nbsp;-&nbsp;Apr.&nbsp;2)</td>
   <td><em>(no class)</em></td>
 </tr>
 <tr><!--- Week 12 -->
-  <td><strong>Week&nbsp;12</strong><br>(Apr.&nbsp;2&nbsp;-&nbsp;8)</td>
+  <td><strong>Week&nbsp;12</strong><br>(Apr.&nbsp;3&nbsp;-&nbsp;9)</td>
   <td>Machine Translation I</td>
   <td><ul>
   <li>Word-based translation models
@@ -293,7 +308,7 @@ We'll update the table below with assignments as they become available, as well 
   </ul></td>
 </tr>
 <tr><!--- Week 13 -->
-  <td><strong>Week&nbsp;13</strong><br>(Apr.&nbsp;9&nbsp;-&nbsp;15)</td>
+  <td><strong>Week&nbsp;13</strong><br>(Apr.&nbsp;10&nbsp;-&nbsp;16)</td>
   <td>Machine Translation II</td>
   <td><ul>
   <li>Phrase-based translation
@@ -308,7 +323,7 @@ We'll update the table below with assignments as they become available, as well 
   </ul></td>
 </tr>
 <tr><!--- Week 14 -->
-  <td><strong>Week&nbsp;14</strong><br>(Apr.&nbsp;16&nbsp;-&nbsp;22)</td>
+  <td><strong>Week&nbsp;14</strong><br>(Apr.&nbsp;17&nbsp;-&nbsp;23)</td>
   <td>Summarization</td>
   <td><ul>
   <li>Single- vs. multi-document summarization
@@ -323,7 +338,7 @@ We'll update the table below with assignments as they become available, as well 
   <!-- </ul></td>      -->
 </tr>
 <tr><!--- Week 15 -->
-  <td><strong>Week&nbsp;15</strong><br>(Apr.&nbsp;23&nbsp;-&nbsp;29)</td>
+  <td><strong>Week&nbsp;15</strong><br>(Apr.&nbsp;24&nbsp;-&nbsp;28)</td>
   <td>Sentiment Analysis</td>
   <td><ul>
   <li>Sentiment lexicons
