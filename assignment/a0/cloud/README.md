@@ -18,7 +18,7 @@ Accounts, Projects and Billing
 ![Create project](screenshots/3-newprojectdetails-adv-options.png "Create project")
 
 *  Create a new browser tab.
-*  In the new tab, visit https://goo.gl/gcpedu/82QACK request a coupon, and follow the instructions.
+*  In the new tab, visit https://goo.gl/gcpedu/vHbABi request a coupon, and follow the instructions.
 *  Switch back to the original tab.
 *  From the "hamburger" menu in the upper left corner, select Billing.
 
