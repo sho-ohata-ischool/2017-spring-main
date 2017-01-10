@@ -78,6 +78,8 @@ In order to use Jupyter notebooks, we need to set up an SSH tunnel. This will al
 ```
 gcloud compute ssh --ssh-flag=”-L 8888:127.0.0.1:8888” --ssh-flag=”-L 6006:127.0.0.1:6006” <host-name>
 ```
+**Note:** port forwarding may not work properly using the web SSH client on the Google Cloud Console. We recommend installing the Cloud SDK and using it from the command line.
+
 That's a lot to type every time, so you might want to make a [shell alias](https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions) for it. Port 8888 is the default for Jupyter, and we'll be using port 6006 to access some monitoring interfaces for TensorFlow.
 
 * If you're successfully logged in, start a Jupyter notebook server with `jupyter notebook`. You should see a message like "The Jupyter Notebook is running at: http://localhost:8888":
