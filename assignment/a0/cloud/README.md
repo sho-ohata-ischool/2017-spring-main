@@ -70,13 +70,13 @@ In order to use Jupyter notebooks, we need to set up an SSH tunnel. This will al
 * If it gives you the option to run an `./install.sh` script or similar, do so.
 * Run `gcloud init`. When prompted, select the W266 project you created. When it prompts you to set up Google Compute Engine, say Y, and enter the zone of your instance as the default (this would be `us-central1-b` in our example).
 
-* Run `gcloud compute ssh <instance_name>` to SSH to your instance. If it's your first time doing so, you'll be prompted to set up an SSH key. Enter a passphrase you won't forget!
-  * Note:  If your local machine user-name is different from the VM instance username, you will want to instead run `gcloud compute ssh <vm_username>@<instance_name>` to ensure you login as the user where w266/ is located.
+* Run `gcloud compute ssh <instance-name>` to SSH to your instance. If it's your first time doing so, you'll be prompted to set up an SSH key. Enter a passphrase you won't forget!
+  * Note:  If your local machine username is different from the VM instance username, you will want to instead run `gcloud compute ssh <vm-username>@<instance-name>` to ensure you login as the user where w266/ is located.
 * If you're able to log in successfully, hit Ctrl+D or type `logout` to exit.
 
-* Run the following command, which will SSH to your server _and_ tunnel ports 8888 and 6006:
+* Run the following command *from your laptop*, which will SSH to your server _and_ tunnel ports 8888 and 6006:
 ```
-gcloud compute ssh --ssh-flag=”-L 8888:127.0.0.1:8888” --ssh-flag=”-L 6006:127.0.0.1:6006” <host-name>
+gcloud compute ssh --ssh-flag=”-L 8888:127.0.0.1:8888” --ssh-flag=”-L 6006:127.0.0.1:6006” <vm-username>@<instance-name>
 ```
 **Note:** port forwarding may not work properly using the web SSH client on the Google Cloud Console. We recommend installing the Cloud SDK and using it from the command line.
 
