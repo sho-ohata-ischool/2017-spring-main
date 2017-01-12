@@ -18,7 +18,13 @@ Understanding language is fundamental to human interaction. Our brains have evol
 * Friday 4p - 5:30p Pacific ([James Kunz](mailto:jkunz@ischool.berkeley.edu))
 
 **Office Hours:**
-* TBD - please enter your preferences in the [poll](http://doodle.com/poll/679ybxc3w96umfpu)
+* Monday 8p Pacific (James)\*
+* Wednesday 6:30p - 7:30p Pacific (Drew)
+* Thursday 5:30p - 6:30p Pacific (Ian)
+* Friday 5:30p Pacific (James)\*
+
+\* _For James' OH, please arrive at the beginning of the time (see [this note](https://piazza.com/class/iwhnzw9npj5652?cid=14))._  
+If you can't make these times, don't hesitate to post questions on Piazza or contact the instructors about meeting by appointment.
 
 **Course Assistant:**
 * [Drew Plant](mailto:drewplant@berkeley.edu)
@@ -71,7 +77,7 @@ We’ll be posting materials to the course [GitHub repo](../../../).
 
 *Note:* this is a new class, and the syllabus below might be subject to change. We'll be sure to announce anything major on [Piazza](http://piazza.com/berkeley/spring2017/datasciw266).
 
-## Code References
+### Code References
 
 The course will be taught in Python, and we'll be making heavy use of NumPy, TensorFlow, and Jupyter (IPython) notebooks. We'll also be using Git for distributing and submitting materials. If you want to brush up on any of these, we recommend:
 * **Git tutorials:** [Introduction / Cheat Sheet](https://git-scm.com/docs/gittutorial), or [interactive tutorial](https://try.github.io/)
@@ -79,7 +85,7 @@ The course will be taught in Python, and we'll be making heavy use of NumPy, Ten
 * **TensorFlow:** We'll go over the basics of TensorFlow in [Assignment 1](../../../tree/master/assignment/a1/). You can also check out the [tutorials](https://www.tensorflow.org/get_started/) on the TensorFlow website, but these can be somewhat confusing if you're not familiar with the underlying models.
 
 
-## Misc. Deep Learning and NLP References
+### Misc. Deep Learning and NLP References
 A few useful papers that don’t fit under a particular week. All optional, but interesting!
 * (optional) [Chris Olah’s blog](http://colah.github.io/)
 * (optional) [Natural Language Processing (almost) from Scratch (Collobert and Weston, 2011)](https://arxiv.org/pdf/1103.0398v1.pdf)
@@ -89,7 +95,7 @@ A few useful papers that don’t fit under a particular week. All optional, but 
 
 ## Schedule and Readings
 
-We'll update the table below with assignments as they become available, as well as additional materials throughout the quarter. Keep an eye on GitHub for updates!
+We'll update the table below with assignments as they become available, as well as additional materials throughout the semester. Keep an eye on GitHub for updates!
 
 <table>
 <tr>
@@ -112,7 +118,10 @@ We'll update the table below with assignments as they become available, as well 
   <li>Read: <a href="https://www.technologyreview.com/s/602094/ais-language-problem/" target="_blank">AI’s Language Problem (Technology Review)</a>
   <li><em>Optional:</em> <a href="http://www.newyorker.com/magazine/2007/04/16/the-interpreter-2" target="_blank">The Interpreter (New Yorker)</a>
   <li><em>Optional:</em> <a href="https://www.uio.no/studier/emner/hf/ikos/EXFAC03-AAS/h05/larestoff/linguistics/Chapter%204.(H05).pdf" target="_blank">Introduction to Linguistic Typology</a>
-  </ul></td>
+  </ul> 
+  <p>
+  <a href="https://docs.google.com/a/kunz.ca/presentation/d/1uyAg4gjT2indnNIGGp8uIKeok_w9Un5pFbFXY_WL9TQ/edit?usp=sharing" target="_blank">[James's&nbsp;Slides]</a> <a href="https://docs.google.com/presentation/d/1BL_nxhy6-xGIIqEu0QGvvJJ9fhJT9EwyOS55ZmRPW3Q/edit?usp=sharing" target="_blank">[Ian's&nbsp;Slides]</a>
+  </td>
 </tr>
 <tr><!--- Week 1 Assignment -->
   <td><strong><a href="../assignment/a0" target="_blank">Assignment&nbsp;0</a></strong>
