@@ -11,6 +11,8 @@ While we're releasing them at the same time, we strongly recommend that you do t
 
 **Hint:** James will be going through Assignment 1 in the extra office hour in Week 2 (January 18 at 6:30pm Pacific). Please come with your questions!
 
+The information theory notebook is designed to be self-contained and not depend on the async or readings. The async, however, will reference a number of concepts from this notebook - so we hope that it serves as useful background!
+
 We anticipate you will spend most of your time on the TensorFlow introduction.
 TensorFlow is a somewhat different programming model than you may be used to. 
 Similar to MapReduce, it breaks constructing the computational graph and executing it into two separate steps. 
