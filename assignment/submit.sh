@@ -67,6 +67,7 @@ git fetch "$REMOTE_ALIAS"
 if [[ $(git rev-parse HEAD) == $(git ls-remote "$REMOTE_ALIAS" "${TARGET_BRANCH}" | cut -f1) ]]; then
   echo "=== Submission successful! ==="
 else
-  echo "=== ERROR: Submission failed. Manually push this repo to $REPO_NAME:${TARGET_BRANCH}, or
-  contact the course staff for help."
+  echo "=== ERROR: Submission failed. Manually push to $REPO_NAME:${TARGET_BRANCH}, or contact the course staff for help."
+  echo "=== Alternatively, re-run this script in force-mode:"
+  echo "=== ./submit.sh -u your-github-username -f"
 fi
