@@ -27,7 +27,7 @@ Commit the change with `git commit`.
 
 4. **Create your personal submission repo** at [this link](https://classroom.github.com/assignment-invitations/8bb12cea693c37496b7ba934bd9183e6). We'll use this for submitting assignments; it's private to you and the instructors.
 
-5. **Run the submit script**: `./assignment/submit.sh your-github-username`, which will push to your personal repo. It will try to verify the submission, but you can also visit the repo on GitHub and confirm that your changes show up.
+5. **Run the submit script**: `./assignment/submit.sh -u your-github-username`, which will push to your personal repo. It will try to verify the submission, but you can also visit the repo on GitHub and confirm that your changes show up.
 
 ## Next...
 

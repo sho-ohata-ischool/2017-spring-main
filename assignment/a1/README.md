@@ -20,5 +20,5 @@ Some students describe this introduction as the hardest 10 lines of code they've
 
 As with Assignment 0, please submit by running the submit script:
 ```
-./assignment/submit.sh your-github-username
+./assignment/submit.sh -u your-github-username
 ```
