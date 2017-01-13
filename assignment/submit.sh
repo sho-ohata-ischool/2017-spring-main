@@ -5,10 +5,25 @@
 # BEFORE YOU RUN THIS: check assignment 0 for the invite link,
 # which will create a private submission repo linked to your GitHub username.
 #
-# Usage: ./submit.sh my_github_username
+# Usage: ./submit.sh -u my_github_username
 
-GITHUB_USERNAME=${1:-"$USER"}
+GITHUB_USERNAME="${USER}"
+FORCE="false"
 TARGET_BRANCH="master"
+
+while getopts "u:f" opt; do
+  case $opt in
+    u)
+      GITHUB_USERNAME="${OPTARG}"
+      ;;
+    f)
+      FORCE="true"
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      ;;
+  esac
+done
 
 set -e
 
@@ -34,7 +49,18 @@ if [[ $(git remote | grep "$REMOTE_ALIAS") ]]; then
 fi
 git remote -v add "$REMOTE_ALIAS" "${REMOTE_URL}"
 # git push "$REMOTE_ALIAS" --all
-git push "$REMOTE_ALIAS" "HEAD:${TARGET_BRANCH}"
+if [[ ${FORCE} == true ]]; then
+  echo "Warning! Force-submit will overwrite remote history. Proceed?"
+  select mode in "Force submit" "(cancel)"; do
+    case $mode in
+      "Force submit" ) echo "Proceeding with submission!"; break;;
+      "(cancel)"  ) echo "Submit cancelled."; exit;;
+    esac
+  done
+  git push "$REMOTE_ALIAS" "+HEAD:${TARGET_BRANCH}"
+else
+  git push "$REMOTE_ALIAS" "HEAD:${TARGET_BRANCH}"
+fi
 
 # Verify submission succeeded
 git fetch "$REMOTE_ALIAS"
