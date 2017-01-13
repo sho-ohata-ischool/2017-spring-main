@@ -55,12 +55,13 @@ Setting up your instance
 In your ssh terminal, type:
 ```
 git clone https://github.com/datasci-w266/2017-spring-main.git ~/w266
-cd w266/assignment/week1/cloud
-./setup.sh
+./w266/assignment/a0/cloud/setup.sh
 source ~/.bashrc
 ```
 
 `setup.sh` installs Anaconda and TensorFlow. There are a handful of times you'll need to accept the license agreement or confirm an install path (just accept the defaults, and allow it to modify your .bashrc file).
+
+_Note: if you're not using a Cloud instance, but are running Ubuntu on your laptop or a VM, you can also use `setup.sh` or cherry-pick commands from it to install the necessary packages._
 
 Run a notebook and connect to it from your local machine
 --------------------------------------------------------
