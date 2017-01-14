@@ -6,7 +6,7 @@ Google has made $50.00 USD Compute Engine credits available to all of us.  There
 Accounts, Projects and Billing
 ------------------------------
 
-*  Make sure the **only** Google account you are currently logged in as is your [@berkeley.edu](http://bmail.berkeley.edu/) account.  
+*  Make sure the **only** Google account you are currently logged in as is your [@berkeley.edu](http://bmail.berkeley.edu/) account. (_Not the @ischool.berkeley.edu one!_) 
 *  Visit [cloud.google.com](http://cloud.google.com)
 *  Click "Console" in the upper right corner.
 
@@ -52,7 +52,7 @@ Google Cloud provides a handy in-browser SSH client. Click "SSH" on the VM Insta
 
 Setting up your instance
 ------------------------
-In your ssh terminal, type:
+In your terminal **on the remote instance**, type:
 ```
 git clone https://github.com/datasci-w266/2017-spring-main.git ~/w266
 ./w266/assignment/a0/cloud/setup.sh
@@ -65,7 +65,7 @@ _Note: if you're not using a Cloud instance, but are running Ubuntu on your lapt
 
 Run a notebook and connect to it from your local machine
 --------------------------------------------------------
-In order to use Jupyter notebooks, we need to set up an SSH tunnel. This will allow the browser on your local machine to connect directly to the Jupyter server and Python backend running on your cloud instance.
+In order to use Jupyter notebooks, we need to set up an SSH tunnel. This will allow the browser on your local machine to connect directly to the Jupyter server and Python backend running on your cloud instance. _All the below commands should be run **on your laptop**, unless specified otherwise._
 
 * First, install the Google Cloud SDK for your operating system. Follow the instructions at: https://cloud.google.com/sdk/
 * If it gives you the option to run an `./install.sh` script or similar, do so.
@@ -83,13 +83,13 @@ gcloud compute ssh --ssh-flag=”-L 8888:127.0.0.1:8888” --ssh-flag=”-L 6006
 
 That's a lot to type every time, so you might want to make a [shell alias](https://www.digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions) for it. Port 8888 is the default for Jupyter, and we'll be using port 6006 to access some monitoring interfaces for TensorFlow.
 
-* If you're successfully logged in, start a Jupyter notebook server with `jupyter notebook`. You should see a message like "The Jupyter Notebook is running at: http://localhost:8888":
+* If you're successfully logged in, start a Jupyter notebook server **on your remote instance** with `jupyter notebook`. You should see a message like "`The Jupyter Notebook is running at: http://localhost:8888`":
 ![Notebook Server Console](screenshots/nbserver.png "Notebook Server Console")
 
-* Open a browser and go to http://localhost:8888. You should see the Jupyter notebook home:
+* Open a browser on your laptop and go to [http://localhost:8888](http://localhost:8888). You should see the Jupyter notebook home:
 ![Notebook Client](screenshots/nbserver-client.png "Notebook Client")
 
-You might want to use `tmux` (or `screen`) to keep the notebook server running, even if you get disconnected or want to leave something running while you close your terminal. On your instance, run:
+You might want to use `tmux` (or `screen`) to keep the notebook server running, even if you get disconnected or want to leave something running while you close your terminal. **On your instance**, run:
 ````
 tmux new-session -s notebook
 # should see a new terminal prompt
