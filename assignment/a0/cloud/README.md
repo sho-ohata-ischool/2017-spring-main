@@ -77,7 +77,7 @@ In order to use Jupyter notebooks, we need to set up an SSH tunnel. This will al
 
 * Run the following command *from your laptop*, which will SSH to your server _and_ tunnel ports 8888 and 6006:
 ```
-gcloud compute ssh --ssh-flag=”-L 8888:127.0.0.1:8888” --ssh-flag=”-L 6006:127.0.0.1:6006” <vm-username>@<instance-name>
+gcloud compute ssh --ssh-flag="-L 8888:127.0.0.1:8888" --ssh-flag="-L 6006:127.0.0.1:6006" <vm-username>@<instance-name>
 ```
 **Note:** port forwarding may not work properly using the web SSH client on the Google Cloud Console. We recommend installing the Cloud SDK and using it from the command line.
 
