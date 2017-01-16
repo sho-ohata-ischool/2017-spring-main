@@ -27,6 +27,20 @@ done
 
 set -e
 
+CHANGED=$(git diff-index --name-only HEAD --)
+if [[ ! -z "$CHANGED" ]]; then
+  echo "Warning! You have uncommitted changes in this repository:"
+  git diff --stat
+  echo "Commit before submitting? (submit.sh will only push commited changes)"
+  select mode in "Yes" "No" "(cancel)"; do
+    case $mode in
+      "Yes" ) git commit -a; break;;
+      "No" ) break;;
+      "(cancel)" ) echo "Submit cancelled."; exit;;
+    esac
+  done
+fi
+
 REPO_NAME="datasci-w266/2017-spring-assignment-$GITHUB_USERNAME"
 
 echo "Select preferred GitHub access protocol:"
@@ -35,7 +49,7 @@ select mode in "HTTPS" "SSH" "(cancel)"; do
   case $mode in
     "HTTPS" ) REMOTE_URL="https://github.com/$REPO_NAME.git"; break;;
     "SSH" ) REMOTE_URL="git@github.com:$REPO_NAME.git"; break;;
-    "(cancel)" ) exit;;
+    "(cancel)" ) echo "Submit cancelled."; exit;;
   esac
 done
 
@@ -63,6 +77,7 @@ else
 fi
 
 # Verify submission succeeded
+echo "=== Verifying submission ==="
 git fetch "$REMOTE_ALIAS"
 if [[ $(git rev-parse HEAD) == $(git ls-remote "$REMOTE_ALIAS" "${TARGET_BRANCH}" | cut -f1) ]]; then
   echo "=== Submission successful! ==="
