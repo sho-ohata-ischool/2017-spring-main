@@ -120,7 +120,7 @@ We'll update the table below with assignments as they become available, as well 
   <li><em>Optional:</em> <a href="https://www.uio.no/studier/emner/hf/ikos/EXFAC03-AAS/h05/larestoff/linguistics/Chapter%204.(H05).pdf" target="_blank">Introduction to Linguistic Typology</a>
   </ul> 
   <p>
-  <a href="https://docs.google.com/a/kunz.ca/presentation/d/1uyAg4gjT2indnNIGGp8uIKeok_w9Un5pFbFXY_WL9TQ/edit?usp=sharing" target="_blank">[James's&nbsp;Slides]</a> <a href="https://docs.google.com/presentation/d/1BL_nxhy6-xGIIqEu0QGvvJJ9fhJT9EwyOS55ZmRPW3Q/edit?usp=sharing" target="_blank">[Ian's&nbsp;Slides]</a>
+  <a href="https://docs.google.com/a/kunz.ca/presentation/d/1uyAg4gjT2indnNIGGp8uIKeok_w9Un5pFbFXY_WL9TQ/preview" target="_blank">[James's&nbsp;Slides]</a> <a href="https://docs.google.com/presentation/d/1BL_nxhy6-xGIIqEu0QGvvJJ9fhJT9EwyOS55ZmRPW3Q/preview" target="_blank">[Ian's&nbsp;Slides]</a>
   </td>
 </tr>
 <tr><!--- Week 1 Assignment -->
@@ -146,7 +146,10 @@ We'll update the table below with assignments as they become available, as well 
   <li>Skim: <a href="http://www.cs.berkeley.edu/~klein/cs294-5/chen_goodman.pdf" target="_blank">Chen and Goodman Survey</a>
   <li>Skim: <a href="http://arxiv.org/pdf/1312.3005.pdf" target="_blank">1 Billion Word Benchmark</a>
   <li><em>Optional:</em> <a href="http://norvig.com/ngrams/ch14.pdf" target="_blank">Natural Language Corpus Data (Peter Norvig)</a>
-  </ul></td>
+  </ul>
+  <p>
+  <a href="https://docs.google.com/a/kunz.ca/presentation/d/1Ooac3niWJCAG0yxjVtG-x6o4d2qg_blKDbLO6YHcLFU/preview" target="_blank">[Slides]</a> <a href="../materials/week2/lm1.ipynb" target="_blank">[Language&nbsp;Modeling&nbsp;Notebook]</a>
+  </td>
 </tr>
 <tr><!--- Week 2 Assignment -->
   <td><strong><a href="../assignment/a1" target="_blank">Assignment&nbsp;1</a></strong>
