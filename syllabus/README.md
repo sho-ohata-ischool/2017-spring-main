@@ -159,7 +159,10 @@ We'll update the table below with assignments as they become available, as well 
     <li>Information Theory
     <li>TensorFlow tutorial
   </ul></td>
-  <td><a href="../assignment/a1" target="_blank">Assignment 1</a></td>
+  <td>
+    <a href="../assignment/a1" target="_blank">Assignment 1</a>
+    <a href="https://docs.google.com/presentation/d/1z-EsTa3yUn0GBBelNgbUpZbAU_yob2oMM-NlYTP9oHg/edit#slide=id.p">[Tutorial Slides]</a>
+  </td>
 </tr>
 <tr><!--- Week 3 -->
   <td><strong>Week&nbsp;3</strong><br>(Jan.&nbsp;23&nbsp;-&nbsp;29)</td>
