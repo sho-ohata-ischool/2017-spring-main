@@ -41,6 +41,8 @@ If you can't make these times, don't hesitate to post questions on Piazza or con
 ## Grading
 ### Breakdown
 
+Your grade report can be found at [https://w266grades.appspot.com](https://w266grades.appspot.com).
+
 Your grade will be determined as follows:
 * **Participation**: 10%
 * **Assignments**: 50%
