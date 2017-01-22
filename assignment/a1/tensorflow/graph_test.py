@@ -56,10 +56,10 @@ class TestLayer(tf.test.TestCase):
             sess.run(out, feed_dict={
                 x: np.array([[1., 2., 3.], [4., 5., 6.]])})
 
-            x_val = np.array([[3., 2., 1.], [5., 6., 87.]])
+            x_val = np.array([[-3., 2., 1.], [5., 6., 87.]])
             out_val = sess.run(out, feed_dict={x: x_val})
             self.assertEquals((2, 1), out_val.shape)
-            self.assertAllClose([[1.597199],[50.472717]], out_val)
+            self.assertAllClose([[1.735874],[50.472717]], out_val)
 
     def test_no_fully_connected_layers(self):
         with self.test_session() as sess:
