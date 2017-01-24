@@ -182,7 +182,10 @@ We'll update the table below with assignments as they become available, as well 
   <li><em>Optional:</em> <a href="http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/" target="_blank">Deep Learning, NLP, and Representations</a> (Chris Olah's blog)
   <li><em>Optional:</em> <a href="https://www.tensorflow.org/versions/master/tutorials/word2vec/index.html" target="_blank">Tensorflow Word2Vec Tutorial</a> (just the parts on <a href="https://github.com/tensorflow/tensorflow/blob/r0.10/tensorflow/examples/tutorials/word2vec/word2vec_basic.py" target="_blank">word2vec_basic.py</a> - don’t bother with the “Optimizing the Implementation” part or anything in C++)
   <li><em>Optional:</em> <a href="https://www.technologyreview.com/s/602025/how-vector-space-mathematics-reveals-the-hidden-sexism-in-language/" target="_blank">How Vector Space Mathematics Reveals the Hidden Sexism in Language</a> (and the <a href="http://arxiv.org/abs/1607.06520)" target="_blank">original paper</a>)
-  </ul></td>
+  </ul>
+  <p>
+  <a href="https://docs.google.com/a/kunz.ca/presentation/d/17Szk1eaE0v6Q4md-U7nsCLREhGLdUE4ekR6QMFe-nHo/preview" target="_blank">[Slides]</a> <a href="../materials/week3/embeddings.ipynb" target="_blank">[Word&nbsp;Embeddings&nbsp;Notebook]</a>
+  </td>
 </tr>
 <tr><!--- Week 4 -->
   <td><strong>Week&nbsp;4</strong><br>(Jan.&nbsp;30&nbsp;-&nbsp;Feb.&nbsp;5)</td>
