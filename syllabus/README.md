@@ -184,7 +184,7 @@ We'll update the table below with assignments as they become available, as well 
   <li><em>Optional:</em> <a href="https://www.technologyreview.com/s/602025/how-vector-space-mathematics-reveals-the-hidden-sexism-in-language/" target="_blank">How Vector Space Mathematics Reveals the Hidden Sexism in Language</a> (and the <a href="http://arxiv.org/abs/1607.06520)" target="_blank">original paper</a>)
   </ul>
   <p>
-  <a href="https://docs.google.com/a/kunz.ca/presentation/d/17Szk1eaE0v6Q4md-U7nsCLREhGLdUE4ekR6QMFe-nHo/preview" target="_blank">[Slides]</a> <a href="../materials/week3/embeddings.ipynb" target="_blank">[Word&nbsp;Embeddings&nbsp;Notebook]</a>
+  <a href="https://docs.google.com/a/kunz.ca/presentation/d/17Szk1eaE0v6Q4md-U7nsCLREhGLdUE4ekR6QMFe-nHo/preview" target="_blank">[Slides]</a> <a href="../materials/week3/embeddings.ipynb" target="_blank">[Word&nbsp;Embeddings&nbsp;Notebook]</a> <a href="http://projector.tensorflow.org/" target="_blank">[TensorFlow&nbsp;Embedding&nbsp;Projector]</a>
   </td>
 </tr>
 <tr><!--- Week 4 -->
@@ -200,8 +200,8 @@ We'll update the table below with assignments as they become available, as well 
   <li>Read: <a href="http://machinelearning.wustl.edu/mlpapers/paper_files/BengioDVJ03.pdf" target="_blank">A Neural Probabilistic Language Model</a> (Bengio et al. 2003)
   <li>Read or skim: <a href="http://neuralnetworksanddeeplearning.com/chap2.html" target="_blank">How the backpropagation algorithm works</a>
   <li><em>Optional:</em> <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/" target="_blank">Understanding LSTM Networks</a> (Chris Olah's blog)
-  <li>Optional (skim): <a href="https://www.tensorflow.org/versions/master/tutorials/recurrent/index.html#recurrent-neural-networks" target="_blank">Tensorflow LSTM Language Model Tutorial</a>
-  <li>Optional / fun: <a href="http://playground.tensorflow.org/" target="_blank">Tensorflow Playground</a>
+  <li><em>Optional (skim):</em> <a href="https://www.tensorflow.org/versions/master/tutorials/recurrent/index.html#recurrent-neural-networks" target="_blank">Tensorflow LSTM Language Model Tutorial</a>
+  <li><em>Optional / fun:</em> <a href="http://playground.tensorflow.org/" target="_blank">Tensorflow Playground</a>
   </ul></td>
 </tr>
 <tr><!--- Week 3-4 Assignment -->
