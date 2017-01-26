@@ -205,11 +205,16 @@ We'll update the table below with assignments as they become available, as well 
   </ul></td>
 </tr>
 <tr><!--- Week 3-4 Assignment -->
-  <td><strong>Assignment&nbsp;2</strong>
+  <td><strong><a href="../assignment/a2" target="_blank">Assignment&nbsp;2</a></strong>
   <br>due&nbsp;Feb.&nbsp;5</td>
   <td><strong>n-grams and Word Embeddings</strong></td>
-  <td></td>
-  <td><em>To be released</em></td>
+  <td><ul>
+    <li>Smoothed n-grams
+    <li>Exploring embeddings
+  </ul></td>
+  <td>
+  <a href="../assignment/a2" target="_blank">Assignment 2</a>
+  </td>
 </tr>
 <tr><!--- Week 5 -->
   <td><strong>Week&nbsp;5</strong><br>(Feb.&nbsp;6&nbsp;-&nbsp;12)</td>
@@ -247,6 +252,15 @@ We'll update the table below with assignments as they become available, as well 
   <li>Skim: <a href="http://nlp.stanford.edu/IR-book/pdf/irbookprint.pdf" target="_blank">"An Introduction to Information Retrieval", sections 6.2 and 6.3</a>
   <li><em>Optional:</em> <a href="http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf" target="_blank">PageRank</a> (Page, et al. 1999)
   </ul></td>
+</tr>
+<tr><!--- Week 5-6 Assignment -->
+  <td><strong>Assignment&nbsp;3</strong>
+  <br>due&nbsp;Feb.&nbsp;19</td>
+  <td><strong>RNN Language Model</strong></td>
+  <td></td>
+  <td>
+  <em>To be released</em>
+  </td>
 </tr>
 <tr><!--- Week 7 -->
   <td><strong>Week&nbsp;7</strong><br>(Feb.&nbsp;20&nbsp;-&nbsp;26)</td>
