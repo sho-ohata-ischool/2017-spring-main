@@ -15,12 +15,12 @@ class TFEmbeddingVizWrapper(object):
     checkpoints, etc.
     """
 
-    def __init__(self, LOG_DIR="tf_embedding_viz"):
-        mkdirp(LOG_DIR)
+    def __init__(self, LOGDIR="tf_embedding_viz"):
+        mkdirp(LOGDIR)
 
-        self.LOG_DIR = LOG_DIR
-        self.VOCAB_FILE = os.path.join(LOG_DIR, "metadata.tsv")
-        self.CHECKPOINT_FILE = os.path.join(LOG_DIR, "model.ckpt")
+        self.LOGDIR = LOGDIR
+        self.VOCAB_FILE = os.path.join(LOGDIR, "metadata.tsv")
+        self.CHECKPOINT_FILE = os.path.join(LOGDIR, "model.ckpt")
 
     def write_vocab_file(self, words):
         """Write a vocab list to a file.
@@ -51,7 +51,7 @@ class TFEmbeddingVizWrapper(object):
 	    
 	    ##
 	    # Save metadata
-	    summary_writer = tf.summary.FileWriter(self.LOG_DIR)
+	    summary_writer = tf.summary.FileWriter(self.LOGDIR)
 	    config = projector.ProjectorConfig()
 	    embedding = config.embeddings.add()
 	    embedding.tensor_name = embedding_var.name
@@ -59,12 +59,12 @@ class TFEmbeddingVizWrapper(object):
 	    projector.visualize_embeddings(summary_writer, config)
 
         msg = "Saved {s0:d} x {s1:d} embedding matrix '{name}'"
-        msg += " to LOG_DIR='{log_dir}'"
+        msg += " to LOGDIR='{logdir}'"
         print msg.format(s0=Wv.shape[0], s1=Wv.shape[1], name=name, 
-                log_dir=self.LOG_DIR)
+                logdir=self.LOGDIR)
 
         print "To view, run:"
-        print "\n  tensorboard --log_dir=\"{log_dir}\"\n".format(log_dir=self.LOG_DIR)
+        print "\n  tensorboard --logdir=\"{logdir}\"\n".format(logdir=self.LOGDIR)
         print "and navigate to the \"Embeddings\" tab in the web interface."
 
 
