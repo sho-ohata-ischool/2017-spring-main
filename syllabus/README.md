@@ -202,7 +202,10 @@ We'll update the table below with assignments as they become available, as well 
   <li><em>Optional:</em> <a href="http://colah.github.io/posts/2015-08-Understanding-LSTMs/" target="_blank">Understanding LSTM Networks</a> (Chris Olah's blog)
   <li><em>Optional (skim):</em> <a href="https://www.tensorflow.org/versions/master/tutorials/recurrent/index.html#recurrent-neural-networks" target="_blank">Tensorflow LSTM Language Model Tutorial</a>
   <li><em>Optional / fun:</em> <a href="http://playground.tensorflow.org/" target="_blank">Tensorflow Playground</a>
-  </ul></td>
+  </ul>
+  <p>
+  <a href="https://docs.google.com/presentation/d/1wxvIPmeuB7-5OMjFNoSeZ5Isb832cgZH6E4_DZOtk8g/preview" target="_blank">[Slides]</a>
+  </td>
 </tr>
 <tr><!--- Week 3-4 Assignment -->
   <td><strong><a href="../assignment/a2" target="_blank">Assignment&nbsp;2</a></strong>
