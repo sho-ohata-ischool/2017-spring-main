@@ -38,7 +38,7 @@ Also see below for NLP conferences - [ACL](http://acl2016.org/index.php?article_
 
 This is the most important deliverable.  Take time to get it right! A concrete idea at this early stage will help you build a stronger project and help you in the course overall. 
 
-Each group will submit a proposal.  We’ll read each one and give you detailed feedback. The proposal should be concise.  Quality is valued here far more than quantity!
+Each group will submit a proposal.  We’ll read each one and give you detailed feedback. The proposal should be concise, 200-300 words. Quality is valued here far more than quantity!
 
 Be sure to address:
 - What do you plan to do?
