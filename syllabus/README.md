@@ -298,9 +298,7 @@ We'll update the table below with assignments as they become available, as well 
   <li>Transition-based parsing: Arc&#8209;standard, Arc&#8209;eager
   <li>Graph based parsing: Eisner Algorithm, Chu&#8209;Liu&#8209;Edmonds
   </ul></td>
-  <td><ul>
-  <li>Read: <a href="http://www.nltk.org/book_1ed/ch08.html" target="_blank">NLTK book chapter 8 (analyzing sentence structure)</a>
-  </ul></td>
+  <td><em>Readings TBA</em></td>
 </tr>
 <tr><!--- Week 10 -->
   <td><strong>Week&nbsp;10</strong><br>(Mar.&nbsp;13&nbsp;-&nbsp;19)</td>
@@ -311,10 +309,10 @@ We'll update the table below with assignments as they become available, as well 
   <li>Probabilistic CFGs
   <li>Lexicalized grammars, split-merge, and EM
   </ul></td>
-  <td><em>Readings TBA</em></td>
-  <!-- <td><ul>        -->
-  <!-- <li>Placeholder -->
-  <!-- </ul></td>      -->
+  <td><ul>
+  <li>Read: <a href="http://www.nltk.org/book_1ed/ch08.html" target="_blank">NLTK book chapter 8 (analyzing sentence structure)</a>
+  <li>Play: <a href="http://nlp.stanford.edu:8080/parser/" target="_blank">Stanford parser</a> (online demo)
+  </ul></td>
 </tr>
 <tr><!--- Week 11 -->
   <td><strong>Week&nbsp;11</strong><br>(Mar.&nbsp;20&nbsp;-&nbsp;26)</td>
@@ -325,7 +323,10 @@ We'll update the table below with assignments as they become available, as well 
   <li>Coreference Resolution
   </ul></td>
   <td><ul>
-  <li><a href="http://www.nltk.org/book_1ed/ch07.html" target="_blank">NLTK Book Chapter 7 (Extracting Information from Text)</a>
+  <li>Read: <a href="http://www.nltk.org/book_1ed/ch07.html" target="_blank">NLTK Book Chapter 7 (Extracting Information from Text)</a>
+  <li><em>Optional:</em> <a href="http://www.aclweb.org/anthology/D09-1120" target="_blank">Simple Coreference Resolution with Rich Syntactic and Semantic Features</a> (Haghighi and Klein 2009, rule-based coreference)
+  <li><em>Optional:</em> <a href="http://www.aclweb.org/anthology/P16-1061" target="_blank">Improving Coreference Resolution by Learning Entity-Level Distributed
+  Representations</a> (Clark and Manning 2016, neural coreference)
   </ul></td>
 </tr>
 <tr><!--- Spring Break -->
@@ -342,7 +343,7 @@ We'll update the table below with assignments as they become available, as well 
   <li>Evaluation
   </ul></td>
   <td><ul>
-  <li><a href="http://www.isi.edu/natural-language/mt/wkbk.rtf" target="_blank">Statistical MT Handbook by Kevin Knight</a>
+  <li>Skim: <a href="http://www.isi.edu/natural-language/mt/wkbk.rtf" target="_blank">Statistical MT Handbook by Kevin Knight</a>
   </ul></td>
 </tr>
 <tr><!--- Week 13 -->
@@ -354,8 +355,8 @@ We'll update the table below with assignments as they become available, as well 
   <li>Attention-based models
   </ul></td>
   <td><ul>
-  <li><a href="http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf" target="_blank">Sequence to Sequence Learning with Neural Networks</a>
-  <li><a href="https://arxiv.org/pdf/1409.0473.pdf" target="_blank">Neural Machine Translation by Jointly Learning to Align and Translate</a>
+  <li>Read: <a href="http://papers.nips.cc/paper/5346-sequence-to-sequence-learning-with-neural-networks.pdf" target="_blank">Sequence to Sequence Learning with Neural Networks</a>
+  <li>Read: <a href="https://arxiv.org/pdf/1409.0473.pdf" target="_blank">Neural Machine Translation by Jointly Learning to Align and Translate</a>
   <li><em>Optional:</em> <a href="https://arxiv.org/abs/1609.08144" target="_blank">Google’s Neural Machine Translation System</a>
   <li><em>Optional:</em> <a href="http://distill.pub/2016/augmented-rnns/#attentional-interfaces" target="_blank">Attention and Augmented Recurrent Neural Networks</a> (section on “Attentional Interfaces” has an awesome visualization of an MT example, showing alignments)
   </ul></td>
@@ -370,10 +371,10 @@ We'll update the table below with assignments as they become available, as well 
   <li>Integer linear programming (ILP) for optimal solutions
   <li>Evaluation of summaries
   </ul></td>
-  <td><em>Readings TBA</em></td>
-  <!-- <td><ul>        -->
-  <!-- <li>Placeholder -->
-  <!-- </ul></td>      -->
+  <td><ul>       
+  <li>Skim: <a href="https://www.cs.cmu.edu/~afm/Home_files/Das_Martins_survey_summarization.pdf" target="_blank">A Survey on Automatic Text Summarization</a> (Das and Martins, 2007)
+  <li>Read: <a href="https://arxiv.org/pdf/1509.00685v2.pdf" target="_blank">A Neural Attention Model for Abstractive Sentence Summarization</a> (Rush et al. 2015)
+  </ul></td>     
 </tr>
 <tr><!--- Week 15 -->
   <td><strong>Week&nbsp;15</strong><br>(Apr.&nbsp;24&nbsp;-&nbsp;28)</td>
@@ -383,10 +384,11 @@ We'll update the table below with assignments as they become available, as well 
   <li>Aggregated sentiment applications
   <li>Convolutional neural networks (CNNs)
   </ul></td>
-  <td><em>Readings TBA</em></td>
-  <!-- <td><ul>        -->
-  <!-- <li>Placeholder -->
-  <!-- </ul></td>      -->
+  <td><ul>       
+  <li>Skim: <a href="http://www.cs.cornell.edu/home/llee/omsa/omsa.pdf" target="_blank">Opinion Mining and Sentiment Analysis</a> (Pang and Lee 2008)
+  <li>Read: <a href="http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/" target="_blank">Understanding Convolutional Neural Networks for NLP</a>
+  <li>Read: <a href="https://arxiv.org/abs/1408.5882" target="_blank">Convolutional Neural Networks for Sentence Classification</a>
+  </ul></td>     
 </tr>
 </table>
 
