@@ -64,7 +64,9 @@ class TestAddKTrigramLM(unittest.TestCase):
         _ = self.lm.next_word_proba('w266', ['hello', 'world'])
         _ = self.lm.next_word_proba('dragons', ['there', 'be'])
 
-        self.assertEqual(lm_copy, self.lm)
+        self.assertEqual(lm_copy, self.lm,
+                         msg="lm_copy != self.lm. Calls to next_word_proba " +
+                         "should not modify language model parameters!")
 
 
 class TestKNTrigramLM(unittest.TestCase):
@@ -139,7 +141,9 @@ class TestKNTrigramLM(unittest.TestCase):
         _ = self.lm.next_word_proba('dragons', ('there', 'be'))
         _ = self.lm.next_word_proba('be', ('there', 'be'))
 
-        self.assertEqual(lm_copy, self.lm)
+        self.assertEqual(lm_copy, self.lm,
+                         msg="lm_copy != self.lm. Calls to next_word_proba " +
+                         "should not modify language model parameters!")
 
 if __name__ == '__main__':
     unittest.main()
