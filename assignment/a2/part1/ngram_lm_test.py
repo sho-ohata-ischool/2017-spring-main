@@ -32,8 +32,17 @@ class TestAddKTrigramLM(unittest.TestCase):
     def test_next_word_proba_no_smoothing(self):
         self.lm.set_live_params(k=0.0)
 
-        with self.assertRaises(ZeroDivisionError):
-          self.lm.next_word_proba('w266', ['hello', 'world'])
+        unseen_context_error_msg = """
+LM with k=0 should either crash on unseen context with a ZeroDivisionError, or
+return a plausible alternative probability estimate. If the latter, please
+justify your choice in your code."""
+        try:
+            p = self.lm.next_word_proba('w266', ['hello', 'world'])
+            self.assertTrue(np.isclose(1.0/self.lm.V, p) or np.isclose(0.0, p),
+                            msg=unseen_context_error_msg)
+        except Exception as e:
+            self.assertIsInstance(e, ZeroDivisionError,
+                                  msg=unseen_context_error_msg)
 
         pp = self.lm.next_word_proba('w266', ['there', 'be'])
         self.assertTrue(isinstance(pp, float))
