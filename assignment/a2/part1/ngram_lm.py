@@ -63,7 +63,9 @@ class AddKTrigramLM(object):
 
         #### YOUR CODE HERE ####
         # Compute context counts
-
+	    if not (w_2, w_1) in self.context_totals:
+		self.context_totals[(w_2, w_1)] = 0
+	    self.context_totals[(w_2, w_1)] += 1
 
         #### END(YOUR CODE) ####
         # Total vocabulary size, for normalization
@@ -92,7 +94,8 @@ class AddKTrigramLM(object):
         #### YOUR CODE HERE ####
         # Hint: self.counts.get(...) and self.context_totals.get(...) may be
         # useful here. See note in defaultdict.md about how this works.
-
+	d = self.counts.get(context, {})
+	return float(d.get(word,0) + k) / (self.context_totals.get(context, 0) + k * len(self.words))
 
 
         #### END(YOUR CODE) ####
@@ -180,9 +183,13 @@ class KNTrigramLM(object):
         w_1, w_2 = None, None
         for word in tokens:
             #### YOUR CODE HERE ####
-            pass
-
-
+	    self.counts[()][word] += 1
+            if w_1 is not None:
+		self.counts[(w_1,)][word] += 1
+		if w_1 not in self.type_contexts[word]:
+		    self.type_contexts[word].add(w_1)
+	    if w_1 is not None and w_2 is not None:
+		self.counts[(w_2,w_1)][word] += 1
 
             #### END(YOUR CODE) ####
             # Update context
@@ -196,12 +203,17 @@ class KNTrigramLM(object):
 
         #### YOUR CODE HERE ####
         # Count the total for each context.
-
+	for key in self.counts:
+	    self.context_totals[key]=0
+	    for k,v in self.counts[key].iteritems():
+		self.context_totals[key] += v
         # Count the number of nonzero entries for each context.
-
+	for key in self.counts:
+	    self.context_nnz[key] = len(self.counts[key].values())
 
         # Compute type fertilities, and the sum z_tf.
-
+	for key in self.type_contexts:
+	    self.type_fertility[key] = len(self.type_contexts[key])
 
         self.z_tf = float(sum(self.type_fertility.values()))
         #### END(YOUR CODE) ####
@@ -238,8 +250,14 @@ class KNTrigramLM(object):
         #### YOUR CODE HERE ####
         # Hint: self.counts.get(...) and self.context_totals.get(...) may be
         # useful here. See note in defaultdict.md about how this works.
-
-
+	d_Cabc =  self.counts.get(context,{})
+	C_abc = d_Cabc.get(word, 0)
+	C_ab = self.context_totals.get(context, 0)
+	if C_ab != 0.0:
+	    a_ab = self.context_nnz[context] * delta / C_ab
+	    return max(C_abc - delta,0)/C_ab + a_ab * pw
+	else:
+	    return pw
 
         #### END(YOUR CODE) ####
 

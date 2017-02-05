@@ -29,13 +29,17 @@ class AddTwo(object):
         self.graph = tf.Graph()
         with self.graph.as_default():
             self.sess = tf.Session()
+	    
             # Create a placeholder op for the first number to add.
             # Store a reference to it in self.x
+	    self.x = tf.placeholder("float", None)
 
             # Create a placeholder for the second number to add.
             # Store a reference to it in self.y
+	    self.y = tf.placeholder("float", None)
 
             # Create an op to add the two placeholders. Store it in self.z
+	    self.z = tf.add(self.x, self.y)
         # END YOUR CODE
 
     def Add(self, x, y):
@@ -51,12 +55,14 @@ class AddTwo(object):
 
         # "pass" is a no-op.  It's here to give the function a body so that
         # this file parses as valid python while you work on other sections.
-        pass
+        #pass
               
         # START YOUR CODE
         # Execute the graph you constructed in __init__ using the actual
         # numbers provided in "x" and "y".
-        # END YOUR CODE
+	return self.sess.run(self.z, feed_dict = {self.x: x, self.y: y})
+	
+	# END YOUR CODE
 
 def affine_layer(hidden_dim, x, seed=0):
     '''Create an affine transformation.
@@ -85,16 +91,20 @@ def affine_layer(hidden_dim, x, seed=0):
           It needs to be a trainable variable!
     '''
     pass
-
+    
     # START YOUR CODE
-
+    
     # Draw the sketch suggested in the hint above.
     # Include a photo of the sketch in your submission.
     # In your sketch, label all matrix/vector dimensions.
 
     # Create trainable variables "W" and "b"
-
+    feature_num = x.get_shape()[1]
+    W = tf.get_variable("weights", (feature_num, hidden_dim), initializer=tf.contrib.layers.xavier_initializer(uniform=True, seed=seed, dtype=tf.float32))
+    b = tf.get_variable("bias", (hidden_dim,), initializer = tf.constant_initializer(0.0))
     # Return xW + b.
+    affine = tf.matmul(x, W) + b
+    return affine
     # END YOUR CODE
 
 def fully_connected_layers(hidden_dims, x):
@@ -128,7 +138,14 @@ def fully_connected_layers(hidden_dims, x):
     '''
 
     # START YOUR CODE
-    pass
+    if hidden_dims == []:
+	return tf.identity(x)
+    else:
+	for a in range(len(hidden_dims)):
+		with tf.variable_scope("layer" + str(a)):
+			x = tf.nn.relu(affine_layer(hidden_dims[a], x))
+	return x
+			
     # END YOUR CODE
 
 def train_nn(X, y, X_test, hidden_dims, batch_size, num_epochs, learning_rate,
@@ -178,7 +195,15 @@ def train_nn(X, y, X_test, hidden_dims, batch_size, num_epochs, learning_rate,
     #             with a GradientDescentOptimizer
     #
     # START YOUR CODE
-    pass
+
+    y_hat = affine_layer(hidden_dim=1, x = fully_connected_layers(hidden_dims, x_ph))
+    y_hat = tf.reshape(y_hat,[-1])
+    if hidden_dims != []:
+	loss = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=y_hat, targets=y_ph))
+    else:
+	loss = tf.reduce_mean(y_hat - y_ph)
+    train_op = tf.train.GradientDescentOptimizer(learning_rate).minimize(loss)
+    incremental_global_step = tf.assign(global_step, global_step + 1)
 
     # END YOUR CODE
 
@@ -207,7 +232,8 @@ def train_nn(X, y, X_test, hidden_dims, batch_size, num_epochs, learning_rate,
             # Hint: Evaluate all three in a single call to session.run.
             # Hint: To be clear, do not call session.run more than once!
             # START YOUR CODE
-            pass
+	    _, loss_value, global_step_value = sess.run([train_op, loss, incremental_global_step], feed_dict={x_ph: X_batch, y_ph: y_batch})
+	    
             # END YOUR CODE
         if epoch_num % 300 == 0:
             print 'Step: ', global_step_value, 'Loss:', loss_value
@@ -229,5 +255,8 @@ def train_nn(X, y, X_test, hidden_dims, batch_size, num_epochs, learning_rate,
     # Hint: Make sure you evaluate X_test, not X_train!
 
     # START YOUR CODE
-    pass
+    predictions = sess.run(y_hat, feed_dict = {x_ph: X_test})
+    predictions[predictions >= 0.5] = 1
+    predictions[predictions < 0.5] = 0
+    return predictions
     # END YOUR CODE
