@@ -23,13 +23,17 @@ The project is very open-ended, but we do require it to be an NLP project. This 
 
 As for scope: an ambitious project for a group of 2-3 would be similar in scope and depth of experiments to a conference paper.
 
-For project ideas, take a look at the final projects from [Stanford cs224n](http://nlp.stanford.edu/courses/cs224n/) (all years), or for deep-learning projects, [cs224d](http://cs224d.stanford.edu/) ([2015](http://cs224d.stanford.edu/reports_2015.html), [2016](http://cs224d.stanford.edu/reports_2016.html)). A few examples, as a place to start:
+For project ideas, take a look at the final projects from [last](example-comment-quality.pdf) [semester](example-grammar.pdf), [Stanford cs224n](http://nlp.stanford.edu/courses/cs224n/) (all years), or for deep-learning projects, [cs224d](http://cs224d.stanford.edu/) ([2015](http://cs224d.stanford.edu/reports_2015.html), [2016](http://cs224d.stanford.edu/reports_2016.html)). A few examples, as a place to start:
 - Abstractive summarization of news articles
 - Restaurant menu extraction from user reviews
 - Question-answering with neural attention or memory models
 - Image captioning (language generation)
 - Analysis of gender roles or power dynamics in movie dialogues
 - Explore techniques for interpreting “black box” / neural models for language
+
+Two groups from the Fall 2016 iteration of this course have also graciously agreed to share their project reports:
+- [Automated Comment Scoring](example-comment-quality.pdf) by Tom Yedwab, Kyle Hamilton, and Cory Kind
+- [Essay Scoring with Grammatical Error Detection](example-grammar.pdf) by Ross Katz, Drew Plant, and Nina Kuklisova
 
 Also see below for NLP conferences - [ACL](http://acl2016.org/index.php?article_id=68) and [EMNLP](http://www.emnlp2016.net/accepted-papers.html) are the top two, and you can find plenty of interesting ideas from the recent proceedings!
 

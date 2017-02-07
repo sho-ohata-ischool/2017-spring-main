@@ -158,13 +158,13 @@ We'll update the table below with assignments as they become available, as well 
   <br>due&nbsp;Jan.&nbsp;22</td>
   <td><strong>Background and TensorFlow</strong></td>
   <td><ul>
-    <li>Information Theory
-    <li>TensorFlow tutorial
+  <li>Information Theory
+  <li>TensorFlow tutorial
   </ul></td>
   <td>
-    <a href="../assignment/a1" target="_blank">Assignment 1</a>
-    <p><p>
-    <a href="https://docs.google.com/presentation/d/1z-EsTa3yUn0GBBelNgbUpZbAU_yob2oMM-NlYTP9oHg/preview">[Tutorial&nbsp;Slides]</a>
+  <a href="../assignment/a1" target="_blank">Assignment 1</a>
+  <p><p>
+  <a href="https://docs.google.com/presentation/d/1z-EsTa3yUn0GBBelNgbUpZbAU_yob2oMM-NlYTP9oHg/preview">[Tutorial&nbsp;Slides]</a>
   </td>
 </tr>
 <tr><!--- Week 3 -->
@@ -261,12 +261,15 @@ We'll update the table below with assignments as they become available, as well 
   </ul></td>
 </tr>
 <tr><!--- Week 5-6 Assignment -->
-  <td><strong>Assignment&nbsp;3</strong>
+  <td><strong><a href="../assignment/a3" target="_blank">Assignment&nbsp;3</a></strong>
   <br>due&nbsp;Feb.&nbsp;19</td>
   <td><strong>RNN Language Model</strong></td>
-  <td></td>
+  <td><ul>
+  <li>RNNLM structure
+  <li>TensorFlow implementation
+  </ul></td>
   <td>
-  <em>To be released</em>
+  <a href="../assignment/a3" target="_blank">Assignment 3</a>
   </td>
 </tr>
 <tr><!--- Week 7 -->
