@@ -238,7 +238,11 @@ We'll update the table below with assignments as they become available, as well 
   <br>due&nbsp;Feb.&nbsp;12</td>
   <td></td>
   <td></td>
-  <td><a href="../project" target="_blank">Final Project Guidelines</a></td>
+  <td><strong><a href="../project" target="_blank">Final Project Guidelines</a></strong>
+  <p>
+  <p><a href="https://docs.google.com/presentation/d/1wxvIPmeuB7-5OMjFNoSeZ5Isb832cgZH6E4_DZOtk8g/edit?slide=id.g1c442da208_0_86" target="_blank">[Project Overview / Topic Slides]</a>
+  <br><a href="https://piazza.com/class/iwhnzw9npj5652?cid=266" target="_blank">[Note on LDC Corpora Access]</a>
+  </td>
 </tr>
 <tr><!--- Week 6 -->
   <td><strong>Week&nbsp;6</strong><br>(Feb.&nbsp;13&nbsp;-&nbsp;19)</td>
