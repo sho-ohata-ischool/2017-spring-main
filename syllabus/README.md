@@ -204,7 +204,7 @@ We'll update the table below with assignments as they become available, as well 
   <li><em>Optional / fun:</em> <a href="http://playground.tensorflow.org/" target="_blank">Tensorflow Playground</a>
   </ul>
   <p>
-  <a href="https://docs.google.com/presentation/d/1wxvIPmeuB7-5OMjFNoSeZ5Isb832cgZH6E4_DZOtk8g/preview" target="_blank">[Slides]</a>
+  <a href="https://docs.google.com/presentation/d/1wxvIPmeuB7-5OMjFNoSeZ5Isb832cgZH6E4_DZOtk8g/preview" target="_blank">[Slides]</a> <a href="../materials/week4/nplm.ipynb" target="_blank">[NPLM Notebook]</a>
   </td>
 </tr>
 <tr><!--- Week 3-4 Assignment -->
