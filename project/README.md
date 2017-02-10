@@ -59,6 +59,9 @@ You must include four references to relevant papers for the technique and/or dat
 
 This year’s NLP conferences might be good for inspiration as well, or if you just want a sense of what people in the field are working on: [NAACL](http://aclweb.org/anthology/N/N16/), [ACL](http://aclweb.org/anthology/P/P16/), [EMNLP](http://aclweb.org/anthology/D/D16/).
 
+Please send your proposal to mids-nlp-instructors@googlegroups.com, either as a PDF or (preferably) a Google Doc. If the latter, we'll provide feedback as in-line comments, which can be more convenient than an email thread.  
+_Please no Microsoft Word documents!_
+
 ## Milestone
 **30% of project grade**
 
