@@ -12,7 +12,7 @@
 #   -a <number> : specify assignment number
 
 GITHUB_USERNAME="${USER}"
-DEFAULT_ASSIGNMENT="2"
+DEFAULT_ASSIGNMENT="3"
 FORCE="false"
 TARGET_BRANCH="master"
 

@@ -158,13 +158,13 @@ We'll update the table below with assignments as they become available, as well 
   <br>due&nbsp;Jan.&nbsp;22</td>
   <td><strong>Background and TensorFlow</strong></td>
   <td><ul>
-    <li>Information Theory
-    <li>TensorFlow tutorial
+  <li>Information Theory
+  <li>TensorFlow tutorial
   </ul></td>
   <td>
-    <a href="../assignment/a1" target="_blank">Assignment 1</a>
-    <p><p>
-    <a href="https://docs.google.com/presentation/d/1z-EsTa3yUn0GBBelNgbUpZbAU_yob2oMM-NlYTP9oHg/preview">[Tutorial&nbsp;Slides]</a>
+  <a href="../assignment/a1" target="_blank">Assignment 1</a>
+  <p><p>
+  <a href="https://docs.google.com/presentation/d/1z-EsTa3yUn0GBBelNgbUpZbAU_yob2oMM-NlYTP9oHg/preview">[Tutorial&nbsp;Slides]</a>
   </td>
 </tr>
 <tr><!--- Week 3 -->
@@ -204,7 +204,7 @@ We'll update the table below with assignments as they become available, as well 
   <li><em>Optional / fun:</em> <a href="http://playground.tensorflow.org/" target="_blank">Tensorflow Playground</a>
   </ul>
   <p>
-  <a href="https://docs.google.com/presentation/d/1wxvIPmeuB7-5OMjFNoSeZ5Isb832cgZH6E4_DZOtk8g/preview" target="_blank">[Slides]</a>
+  <a href="https://docs.google.com/presentation/d/1wxvIPmeuB7-5OMjFNoSeZ5Isb832cgZH6E4_DZOtk8g/preview" target="_blank">[Slides]</a> <a href="../materials/week4/nplm.ipynb" target="_blank">[NPLM Notebook]</a>
   </td>
 </tr>
 <tr><!--- Week 3-4 Assignment -->
@@ -238,7 +238,11 @@ We'll update the table below with assignments as they become available, as well 
   <br>due&nbsp;Feb.&nbsp;12</td>
   <td></td>
   <td></td>
-  <td><a href="../project" target="_blank">Final Project Guidelines</a></td>
+  <td><strong><a href="../project" target="_blank">Final Project Guidelines</a></strong>
+  <p>
+  <p><a href="https://docs.google.com/presentation/d/1wxvIPmeuB7-5OMjFNoSeZ5Isb832cgZH6E4_DZOtk8g/edit?slide=id.g1c442da208_0_86" target="_blank">[Project Overview / Topic Slides]</a>
+  <br><a href="https://piazza.com/class/iwhnzw9npj5652?cid=266" target="_blank">[Note on LDC Corpora Access]</a>
+  </td>
 </tr>
 <tr><!--- Week 6 -->
   <td><strong>Week&nbsp;6</strong><br>(Feb.&nbsp;13&nbsp;-&nbsp;19)</td>
@@ -257,12 +261,15 @@ We'll update the table below with assignments as they become available, as well 
   </ul></td>
 </tr>
 <tr><!--- Week 5-6 Assignment -->
-  <td><strong>Assignment&nbsp;3</strong>
+  <td><strong><a href="../assignment/a3" target="_blank">Assignment&nbsp;3</a></strong>
   <br>due&nbsp;Feb.&nbsp;19</td>
   <td><strong>RNN Language Model</strong></td>
-  <td></td>
+  <td><ul>
+  <li>RNNLM structure
+  <li>TensorFlow implementation
+  </ul></td>
   <td>
-  <em>To be released</em>
+  <a href="../assignment/a3" target="_blank">Assignment 3</a>
   </td>
 </tr>
 <tr><!--- Week 7 -->
@@ -298,7 +305,11 @@ We'll update the table below with assignments as they become available, as well 
   <li>Transition-based parsing: Arc&#8209;standard, Arc&#8209;eager
   <li>Graph based parsing: Eisner Algorithm, Chu&#8209;Liu&#8209;Edmonds
   </ul></td>
-  <td><em>Readings TBA</em></td>
+  <td><ul>
+  <li>Read: <a href="https://research.googleblog.com/2016/05/announcing-syntaxnet-worlds-most.html" target="_blank">SyntaxNet (Parsey McParseface)</a>
+  <li>Read: <a href="https://web.stanford.edu/~jurafsky/slp3/14.pdf" target="_blank">Dependency Parsing (J&M Chapter 14)</a>
+  <li>Optional: <a href="http://cs.stanford.edu/people/danqi/papers/emnlp2014.pdf" target="_blank">A Fast and Accurate Dependency Parser using Neural Networks</a> (Chen & Manning 2014)
+  </ul></td>
 </tr>
 <tr><!--- Week 10 -->
   <td><strong>Week&nbsp;10</strong><br>(Mar.&nbsp;13&nbsp;-&nbsp;19)</td>
@@ -385,7 +396,7 @@ We'll update the table below with assignments as they become available, as well 
   <li>Convolutional neural networks (CNNs)
   </ul></td>
   <td><ul>       
-  <li>Skim: <a href="http://www.cs.cornell.edu/home/llee/omsa/omsa.pdf" target="_blank">Opinion Mining and Sentiment Analysis</a> (Pang and Lee 2008)
+  <li>Skim: <a href="http://www.cs.cornell.edu/home/llee/omsa/omsa.pdf" target="_blank">Opinion Mining and Sentiment Analysis</a> (Pang and Lee 2008) - focus on Chapters 1-4
   <li>Read: <a href="http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/" target="_blank">Understanding Convolutional Neural Networks for NLP</a>
   <li>Read: <a href="https://arxiv.org/abs/1408.5882" target="_blank">Convolutional Neural Networks for Sentence Classification</a>
   </ul></td>     
