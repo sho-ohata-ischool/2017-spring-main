@@ -88,6 +88,7 @@ class RNNLM(object):
         # Training hyperparameters; these can be changed with feed_dict,
         # and you may want to do so during training.
         with tf.name_scope("Training_Parameters"):
+            # Number of samples for sampled softmax.
             self.softmax_ns = softmax_ns
 
             self.learning_rate_ = tf.placeholder_with_default(
@@ -189,7 +190,10 @@ class RNNLM(object):
 
 
 
-        # Softmax output layer, over vocabulary
+        # Softmax output layer, over vocabulary. Just compute logits_ here.
+        # Hint: the matmul3d function will be useful here; it's a drop-in
+        # replacement for tf.matmul that will handle the "time" dimension
+        # properly.
 
 
 
@@ -221,6 +225,8 @@ class RNNLM(object):
         # See hints in instructions!
 
         # Define approximate loss function.
+        # Note: self.softmax_ns (i.e. k=200) is already defined; use that as the
+        # number of samples.
             # Loss computation (sampled, for training)
 
 
