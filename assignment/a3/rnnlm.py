@@ -179,21 +179,72 @@ class RNNLM(object):
         #### YOUR CODE HERE ####
 
         # Construct embedding layer
+        # Fill in:
+        # - self.W_in_: the embedding matrix variable.
+        # - self.x_: the result of looking up the input_w_-ords in the embedding variable.
+        # Hint: see materials/week4
 
 
 
-        # Construct RNN/LSTM cell and recurrent layer (hint: use tf.nn.dynamic_rnn)
+        # Construct RNN/LSTM cell and recurrent layer.
+        # Hint: Constructing a RNN in TensorFlow involves two steps:
+        #
+        #       A.  Create a "template" LSTM cell.  MakeFancyRNNCell earlier in this
+        #           file does this for you.  (Just pass self.dropout_keep_prob_,
+        #           which we define for you, as the second parameter.
+        #           Optionally, see Piazza or
+        #           https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf
+        #           if you want to learn more about dropout.)
+        #
+        #       B.  Repeat that cell the appropriate number of times
+        #           (tf.nn.dynamic_rnn does this for you).
+        #
+        # Hint: There are a number of types of RNN cell.  LSTM is but one of them.
+        #       what they all have in common is that they generate:
+        #       1. a hidden state you can use for classification, etc.
+        #          For a LSTM, both the "C"ell and the "H"idden layer are bundled
+        #          together in (A).
+        #          The "H" is duplicated as (B).
+        #
+        #       2. some state that must be forwarded to the next cell in the sequence and
+        #
+        #       tf.nn.dynamic_rnn returns:
+        #         - The hidden layer (#1) from each cell through the sequence.
+        #         - The final state output (i.e. #2) from the last cell in the sequence.
+        #
+        # Hint: The first cell of a LSTM (or any other RNN) needs some initial state.
+        #       (subsequence cells get their state from the previous cell).  In TensorFlow,
+        #       this is called the zero_state.  Each cell knows how to generate a zero-state
+        #       of appropriate shape for itself and makes it available through the zero_state
+        #       function.
+        #
+        # You want to fill in:
+        # - self.cell_: the cell template to use
+        # - self.initial_h_: The corresponding zero state for this cell
+        # - self.o_: the output hidden layer for each step in the sequence.
+        # - self.final_h_: The final state from the sequence that we'd want to pass
+        #                  along to the next cell in the sequence, if there were one.
 
 
 
 
 
         # Softmax output layer, over vocabulary
-        # Hint: use the matmul3d() helper here.
+        # Fill in:
+        # - self.W_out_
+        # - self.b_out_: the usual weights and bias variables of the final affine layer.
+        # Hint: No need to do the actual softmax here, just compute the logits.
+        # Hint: use the matmul3d() helper here to perform the affine layer over all
+        #       steps in your sequence in a single function call.
 
 
 
         # Loss computation (true loss, for prediction)
+        # Fill in:
+        # - self.loss_: the *mean* of the loss of the examples in this batch.
+        # Hint: Use tf.nn.sparse_softmax_cross_entropy_with_logits to compute the loss.
+        #       Like assignment 1, be careful which parameters are logits and which are
+        #       labels!
 
 
 
@@ -219,12 +270,34 @@ class RNNLM(object):
 
         #### YOUR CODE HERE ####
 
-        # Define approximate loss function
+        # Define approximate loss function.
+        # Hierarchical softmax is one way to speed up training.
+        # Another approach, with a similar goal, is sampled_softmax_loss.
+        # The mechanics (and paper) are described in the instructions.
+        #
+        # Fill in:
+        # - self.train_loss_
+        #
+        # Hint: self.softmax_ns is already defined (see SetParams) as the number
+        #       of sampled negative examples to use.
+        # Hint: use printf and .get_shape() in here to make sure you understand the
+        #       shape of all your variables.  Depending on how you implement the
+        #       rest of the assignment, it's quite likely that you'll want to use
+        #       a tf.transpose or tf.expand_dims.
+        # Hint: use tf.reduce_mean, not tf.reduce_sum to turn the vector of per-example
+        #       loss values into a single number.
             # Loss computation (sampled, for training)
 
 
 
         # Define optimizer and training op
+        # Fill in: self.train_step_
+        # Hint: use AdagradOptimizer.  This optimizer adapts the learning rate
+        #       on a per-variable basis.  This aggressively moves word vectors for
+        #       rarely seen words, but doesn't do much to the word vector for 'the'
+        #       after the first little bit of training.
+        #       (see http://www.jmlr.org/papers/volume12/duchi11a/duchi11a.pdf
+        #        for more detail if you are interested)
 
 
 
