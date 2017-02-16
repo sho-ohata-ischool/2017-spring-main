@@ -88,6 +88,7 @@ class RNNLM(object):
         # Training hyperparameters; these can be changed with feed_dict,
         # and you may want to do so during training.
         with tf.name_scope("Training_Parameters"):
+            # Number of samples for sampled softmax.
             self.softmax_ns = softmax_ns
 
             self.learning_rate_ = tf.placeholder_with_default(
@@ -177,19 +178,22 @@ class RNNLM(object):
         self.ns_ = tf.tile([self.max_time_], [self.batch_size_, ], name="ns")
 
         #### YOUR CODE HERE ####
+        # See hints in instructions!
 
         # Construct embedding layer
 
 
 
-        # Construct RNN/LSTM cell and recurrent layer (hint: use tf.nn.dynamic_rnn)
+        # Construct RNN/LSTM cell and recurrent layer.
 
 
 
 
 
-        # Softmax output layer, over vocabulary
-        # Hint: use the matmul3d() helper here.
+        # Softmax output layer, over vocabulary. Just compute logits_ here.
+        # Hint: the matmul3d function will be useful here; it's a drop-in
+        # replacement for tf.matmul that will handle the "time" dimension
+        # properly.
 
 
 
@@ -218,8 +222,11 @@ class RNNLM(object):
         self.train_loss_ = None
 
         #### YOUR CODE HERE ####
+        # See hints in instructions!
 
-        # Define approximate loss function
+        # Define approximate loss function.
+        # Note: self.softmax_ns (i.e. k=200) is already defined; use that as the
+        # number of samples.
             # Loss computation (sampled, for training)
 
 
