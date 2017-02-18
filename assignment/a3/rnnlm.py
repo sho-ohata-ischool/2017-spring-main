@@ -183,9 +183,6 @@ class RNNLM(object):
         # Construct embedding layer
 	with tf.name_scope("Embedding_Layer"):
 	    self.W_in_ = tf.Variable(tf.random_uniform([self.V, self.H], -1.0, 1.0), name="W_in")
-    	    #self.W_in_ = tf.reshape(tf.nn.embedding_lookup(C_, self.input_w_), [-1, self.H], name="W_in")
-	    #self.W_in_ = tf.nn.embedding_lookup(C_, self.input_w_, name="W_in")
-
 
         # Construct RNN/LSTM cell and recurrent layer.
 	with tf.name_scope("Recurrent_Layer"):
@@ -193,9 +190,10 @@ class RNNLM(object):
 
 	    if self.initial_h_ == None:
 		self.initial_h_ = self.cell_.zero_state(self.batch_size_, tf.float32)
-	    #X_in_ = tf.reshape(tf.nn.embedding_lookup(self.W_in_, self.input_w_), [-1,], name="X_in")
-	    X_in_ = tf.nn.embedding_lookup(self.W_in_, self.input_w_)
-	    self.W_out_temp_, self.final_h_  = tf.nn.dynamic_rnn(self.cell_, X_in_, initial_state=self.initial_h_)
+
+	    self.X_in_ = tf.nn.embedding_lookup(self.W_in_, self.input_w_)
+	    self.W_out_temp_, self.final_h_  = tf.nn.dynamic_rnn(self.cell_, self.X_in_,
+							initial_state=self.initial_h_)
 	    self.W_out_ = tf.reshape(self.W_out_temp_, [self.H, self.V])
 
         # Softmax output layer, over vocabulary. Just compute logits_ here.
@@ -204,19 +202,11 @@ class RNNLM(object):
         # properly.
 	with tf.name_scope("Output_Layer"):
 	    self.b_out_ = tf.Variable(tf.zeros([self.V,]))
-	    logits_ = tf.add(matmul3d(self.W_out_temp_, self.W_in_), self.b_out_, name="logits")
-
+	    self.logits_ = tf.add(matmul3d(self.W_out_temp_, self.W_in_), self.b_out_, name="logits")
 
         # Loss computation (true loss, for prediction)
 
 	with tf.name_scope("Cost_Function"):
-    	    # Sampled softmax loss, for training
-    	    per_example_train_loss_ = tf.nn.sampled_softmax_loss(tf.transpose(self.W_out_), self.b_out_, self.W_in_,
-                                             labels=tf.expand_dims(self.target_y_, 1),
-                                             num_sampled=100, num_classes=self.V,
-                                             name="per_example_sampled_softmax_loss")
-    	    train_loss_ = tf.reduce_mean(per_example_train_loss_, name="sampled_softmax_loss")
-
 	    # Full softmax loss, for scoring
 	    per_example_loss_ = tf.nn.sparse_softmax_cross_entropy_with_logits(self.logits_, self.target_y_, name="per_example_loss")
 	    self.loss_ = tf.reduce_mean(per_example_loss_, name="loss")
@@ -250,11 +240,18 @@ class RNNLM(object):
         # number of samples.
             # Loss computation (sampled, for training)
 
-
-
+	with tf.name_scope("Training"):
+	    self.X_in_reshape_ = tf.reshape(self.X_in_, [1,-1])
+	    per_sampled_train_loss_ = tf.nn.sampled_softmax_loss(tf.transpose(self.W_out_),
+					     self.b_out_, self.X_in_reshape_,
+                                             labels=self.target_y_,
+                                             num_sampled=self.softmax_ns, num_classes=1,
+                                             name="per_sampled_softmax_loss")
+	    self.train_loss_ = tf.reduce_mean(per_sampled_train_loss_, name="sampled_softmax_loss")
         # Define optimizer and training op
-
-
+	    self.alpha_ = tf.placeholder(tf.float32, name="learning_rate")
+	    optimizer_ = tf.train.AdagradOptimizer(self.alpha_)
+	    self.train_step_ = optimizer_.minimize(self.train_loss_)
 
         #### END(YOUR CODE) ####
 
@@ -269,11 +266,11 @@ class RNNLM(object):
         """
         # Replace with a Tensor of shape [batch_size, max_time, 1]
         self.pred_samples_ = None
-
         #### YOUR CODE HERE ####
-
-
-
+	with tf.name_scope("Prediction"):
+	    logits_reshaped_ = tf.reshape(self.logits_, [self.batch_size_, 1])
+	    self.pred_samples_temp_ = tf.multinomial(logits_reshaped_, 1, name="pred_random")
+	    self.pred_samples_ = tf.reshape(self.pred_samples_temp_, [self.batch_size_, self.max_time_, 1])
         #### END(YOUR CODE) ####
 
 
