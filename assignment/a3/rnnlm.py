@@ -273,7 +273,7 @@ class RNNLM(object):
         self.pred_samples_ = None
         #### YOUR CODE HERE ####
 	with tf.name_scope("Prediction"):
-	    logits_reshaped_ = tf.reshape(self.logits_, [self.batch_size_, 1])
+	    logits_reshaped_ = tf.reshape(self.logits_, [-1, self.V])
 	    self.pred_samples_temp_ = tf.multinomial(logits_reshaped_, 1, name="pred_random")
 	    self.pred_samples_ = tf.reshape(self.pred_samples_temp_, [self.batch_size_, self.max_time_, 1])
         #### END(YOUR CODE) ####
