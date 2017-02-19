@@ -188,13 +188,13 @@ class RNNLM(object):
 	with tf.name_scope("Recurrent_Layer"):
             self.cell_ = MakeFancyRNNCell(self.H, self.dropout_keep_prob_)
 
-	    if self.initial_h_ == None:
-		self.initial_h_ = self.cell_.zero_state(self.batch_size_, tf.float32)
+	    self.initial_h_ = self.cell_.zero_state(self.batch_size_, tf.float32)
 
 	    self.X_in_ = tf.nn.embedding_lookup(self.W_in_, self.input_w_)
-	    self.W_out_temp_, self.final_h_  = tf.nn.dynamic_rnn(self.cell_, self.X_in_,
-							initial_state=self.initial_h_)
-	    self.W_out_ = tf.reshape(self.W_out_temp_, [self.H, self.V])
+	    self.output_, self.final_h_  = tf.nn.dynamic_rnn(self.cell_, self.X_in_,
+							initial_state=self.initial_h_,
+							sequence_length=self.ns_)
+	    self.W_out_ = tf.Variable(tf.random_uniform([self.H, self.V], -1.0, 1.0), name="W_out")
 
         # Softmax output layer, over vocabulary. Just compute logits_ here.
         # Hint: the matmul3d function will be useful here; it's a drop-in
@@ -202,13 +202,17 @@ class RNNLM(object):
         # properly.
 	with tf.name_scope("Output_Layer"):
 	    self.b_out_ = tf.Variable(tf.zeros([self.V,]))
-	    self.logits_ = tf.add(matmul3d(self.W_out_temp_, self.W_in_), self.b_out_, name="logits")
+	    self.logits_ = tf.add(matmul3d(self.output_, self.W_out_),
+				self.b_out_, name="logits")
 
         # Loss computation (true loss, for prediction)
 
 	with tf.name_scope("Cost_Function"):
 	    # Full softmax loss, for scoring
-	    per_example_loss_ = tf.nn.sparse_softmax_cross_entropy_with_logits(self.logits_, self.target_y_, name="per_example_loss")
+	    per_example_loss_ = tf.nn.sparse_softmax_cross_entropy_with_logits(
+				tf.reshape(self.logits_, [self.batch_size_ * self.max_time_, self.V]),
+				tf.reshape(self.target_y_, [self.batch_size_ * self.max_time_,]),
+				name="per_example_loss")
 	    self.loss_ = tf.reduce_mean(per_example_loss_, name="loss")
 
 
@@ -241,12 +245,19 @@ class RNNLM(object):
             # Loss computation (sampled, for training)
 
 	with tf.name_scope("Training"):
-	    self.X_in_reshape_ = tf.reshape(self.X_in_, [1,-1])
-	    per_sampled_train_loss_ = tf.nn.sampled_softmax_loss(tf.transpose(self.W_out_),
+	    #self.X_in_reshape_ = tf.reshape(self.X_in_, [1,-1])
+	    '''per_sampled_train_loss_ = tf.nn.sampled_softmax_loss(tf.reshape(self.W_out_, [-1,1]),
 					     self.b_out_, self.X_in_reshape_,
-                                             labels=self.target_y_,
-                                             num_sampled=self.softmax_ns, num_classes=1,
+                                             labels=tf.reshape(self.target_y_, [self.batch_size_ * self.max_time_, 1]),
+                                             num_sampled=self.softmax_ns, num_classes=self.V,
+                                             name="per_sampled_softmax_loss")'''
+	    per_sampled_train_loss_ = tf.nn.sampled_softmax_loss(weights=tf.transpose(self.W_out_),
+                                             biases=self.b_out_,
+					     inputs=tf.reshape(self.output_, [-1, self.H]),
+                                             labels=tf.reshape(self.target_y_, [self.batch_size_ * self.max_time_,1]),
+                                             num_sampled=self.softmax_ns, num_classes=self.V,
                                              name="per_sampled_softmax_loss")
+
 	    self.train_loss_ = tf.reduce_mean(per_sampled_train_loss_, name="sampled_softmax_loss")
         # Define optimizer and training op
 	    self.alpha_ = tf.placeholder(tf.float32, name="learning_rate")
