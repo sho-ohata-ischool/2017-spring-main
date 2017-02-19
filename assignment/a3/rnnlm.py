@@ -245,12 +245,6 @@ class RNNLM(object):
             # Loss computation (sampled, for training)
 
 	with tf.name_scope("Training"):
-	    #self.X_in_reshape_ = tf.reshape(self.X_in_, [1,-1])
-	    '''per_sampled_train_loss_ = tf.nn.sampled_softmax_loss(tf.reshape(self.W_out_, [-1,1]),
-					     self.b_out_, self.X_in_reshape_,
-                                             labels=tf.reshape(self.target_y_, [self.batch_size_ * self.max_time_, 1]),
-                                             num_sampled=self.softmax_ns, num_classes=self.V,
-                                             name="per_sampled_softmax_loss")'''
 	    per_sampled_train_loss_ = tf.nn.sampled_softmax_loss(weights=tf.transpose(self.W_out_),
                                              biases=self.b_out_,
 					     inputs=tf.reshape(self.output_, [-1, self.H]),
