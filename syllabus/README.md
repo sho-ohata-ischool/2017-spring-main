@@ -279,7 +279,9 @@ We'll update the table below with assignments as they become available, as well 
   <li>Tag sets
   <li>Most frequent tag baseline
   <li>HMM/CRF models
-  </ul></td>
+  </ul>
+  <b>Note:</b> Section 7.6 this week in the async is optional.
+  </td>
   <td><ul>
   <li>Read: <a href="http://www.nltk.org/book_1ed/ch05.html" target="_blank">NLTK book chapter 5: Categorizing and Tagging Words</a>
   </ul></td>
@@ -291,7 +293,9 @@ We'll update the table below with assignments as they become available, as well 
   <li>Feature engineering
   <li>Leveraging unlabeled data
   <li>Low resource languages
-  </ul></td>
+  </ul>
+  <b>Note:</b> This week's async is optional (but good reference material if your project focuses on POS tagging).  We will spend live session time to reinforce Week 7 material.
+  </td>
   <td><ul>
   <li>Read: <a href="https://arxiv.org/pdf/1104.2086.pdf" target="_blank">A Universal Part-of-Speech Tagset</a>
   <li>Read: <a href="http://nlp.stanford.edu/pubs/CICLing2011-manning-tagging.pdf" target="_blank">Part-of-Speech Tagging from 97% to 100%: Is It Time for Some Linguistics?</a>
