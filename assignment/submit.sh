@@ -21,6 +21,8 @@ function validate_assignment() {
 0
 1
 2
+3
+4
 EOF
 }
 
