@@ -59,7 +59,7 @@ We recognize that sometimes things happen in life outside the course, especially
 
 Once you run out of late days, each 24 hour period (or any part thereof) results in a **10 percentage point deduction** on that deliverable's grade.
 
-You can use a maximum of 2 late days on any single deliverable, and we will not be accepting any submissions more than 48 hours past the original due-date. (We want to be more flexible here, but your fellow students also want their graded assignments back promptly!)
+You can use a **maximum of 2 late days** on any single deliverable.  We will **not be accepting any submissions more than 48 hours past the original due-date**. (We want to be more flexible here, but your fellow students also want their graded assignments back promptly!)
 
 We don't anticipate granting extensions beyond these policies.  Plan your time accordingly!
 
@@ -308,14 +308,14 @@ We'll update the table below with assignments as they become available, as well 
   </ul></td>
 </tr>
 <tr><!--- Week 7-8 Assignment -->
-  <td><strong>Assignment&nbsp;4</strong>
+  <td><strong><a href="../assignment/a4" target="_blank">Assignment&nbsp;4</a></strong>
   <br>due&nbsp;Mar.&nbsp;5</td>
   <td><strong>Dynamic Programming Intro</strong></td>
   <td><ul>
   <li>Dynamic programming
   </ul></td>
   <td>
-  <em>To be released</em>
+  <a href="../assignment/a4" target="_blank">Assignment 4</a>
   <p>
   <p>Note: this is a somewhat shorter assignment than usual.
   </td>
