@@ -289,7 +289,7 @@ We'll update the table below with assignments as they become available, as well 
   <li>Read: <a href="http://www.nltk.org/book_1ed/ch05.html" target="_blank">NLTK book chapter 5: Categorizing and Tagging Words</a>
   </ul>
   <p>
-  <a href="https://docs.google.com/presentation/d/1lTqY-Pn6YUIkFmzn_k7ATzBA0k2a4gkdrMhibfV09_M/preview" target="_blank">[Slides]</a>
+  <a href="https://docs.google.com/presentation/d/1lTqY-Pn6YUIkFmzn_k7ATzBA0k2a4gkdrMhibfV09_M/preview" target="_blank">[Tagging Slides]</a>
   </td>
 </tr>
 <tr><!--- Week 8 -->
@@ -305,7 +305,10 @@ We'll update the table below with assignments as they become available, as well 
   <td><ul>
   <li>Read: <a href="https://arxiv.org/pdf/1104.2086.pdf" target="_blank">A Universal Part-of-Speech Tagset</a>
   <li>Read: <a href="http://nlp.stanford.edu/pubs/CICLing2011-manning-tagging.pdf" target="_blank">Part-of-Speech Tagging from 97% to 100%: Is It Time for Some Linguistics?</a>
-  </ul></td>
+  </ul>
+  <p>
+  <a href="https://docs.google.com/presentation/d/1lTqY-Pn6YUIkFmzn_k7ATzBA0k2a4gkdrMhibfV09_M/preview" target="_blank">[Tagging Slides]</a>
+  </td>
 </tr>
 <tr><!--- Week 7-8 Assignment -->
   <td><strong><a href="../assignment/a4" target="_blank">Assignment&nbsp;4</a></strong>
@@ -332,19 +335,9 @@ We'll update the table below with assignments as they become available, as well 
   <li>Read: <a href="https://research.googleblog.com/2016/05/announcing-syntaxnet-worlds-most.html" target="_blank">SyntaxNet (Parsey McParseface)</a>
   <li>Read: <a href="https://web.stanford.edu/~jurafsky/slp3/14.pdf" target="_blank">Dependency Parsing (J&M Chapter 14)</a>
   <li>Optional: <a href="http://cs.stanford.edu/people/danqi/papers/emnlp2014.pdf" target="_blank">A Fast and Accurate Dependency Parser using Neural Networks</a> (Chen & Manning 2014)
-  </ul></td>
-</tr>
-<tr><!--- Week 8-9 Assignment -->
-  <td><strong>Assignment&nbsp;5</strong>
-  <br>due&nbsp;Mar.&nbsp;12 (tentative)</td>
-  <td><strong>POS Tagging / HMMs</strong></td>
-  <td><ul>
-  <li>HMMs
-  <li>Forward-Backward
-  <li>Viterbi
-  </ul></td>
-  <td>
-  <em>To be released</em>
+  </ul>
+  <p>
+  <a href="https://docs.google.com/presentation/d/1iEqGzKua4ckt88SGx-pOlYxmndchqQg_MUCwjSy1XMM/preview" target="_blank">[Parsing Slides]</a>
   </td>
 </tr>
 <tr><!--- Week 10 -->
@@ -359,7 +352,10 @@ We'll update the table below with assignments as they become available, as well 
   <td><ul>
   <li>Read: <a href="http://www.nltk.org/book_1ed/ch08.html" target="_blank">NLTK book chapter 8 (analyzing sentence structure)</a>
   <li>Play: <a href="http://nlp.stanford.edu:8080/parser/" target="_blank">Stanford parser</a> (online demo)
-  </ul></td>
+  </ul>
+  <p>
+  <a href="https://docs.google.com/presentation/d/1iEqGzKua4ckt88SGx-pOlYxmndchqQg_MUCwjSy1XMM/preview" target="_blank">[Parsing Slides]</a>
+  </td>
 </tr>
 <tr><!--- Week 11 -->
   <td><strong>Week&nbsp;11</strong><br>(Mar.&nbsp;20&nbsp;-&nbsp;26)</td>
@@ -376,13 +372,14 @@ We'll update the table below with assignments as they become available, as well 
   Representations</a> (Clark and Manning 2016, neural coreference)
   </ul></td>
 </tr>
-<tr><!--- Week 10-11 Assignment -->
-  <td><strong>Assignment&nbsp;6</strong>
-  <br>due&nbsp;Mar.&nbsp;26 (tentative)</td>
-  <td><em>TBA</em></td>
+<tr><!--- Project Milestone -->
+  <td><strong><a href="../project/#milestone" target="_blank">Project&nbsp;Milestone</a></strong>
+  <br>due&nbsp;Mar.&nbsp;26</td>
   <td></td>
-  <td>
-  <em>To be released</em>
+  <td></td>
+  <td><strong><a href="../project/#milestone" target="_blank">Final Project Guidelines</a></strong>
+  <p>
+  <br><a href="https://piazza.com/class/iwhnzw9npj5652?cid=266" target="_blank">[Note on LDC Corpora Access]</a>
   </td>
 </tr>
 <tr><!--- Spring Break -->
@@ -401,6 +398,18 @@ We'll update the table below with assignments as they become available, as well 
   <td><ul>
   <li>Skim: <a href="http://www.isi.edu/natural-language/mt/wkbk.rtf" target="_blank">Statistical MT Handbook by Kevin Knight</a>
   </ul></td>
+</tr>
+<tr><!--- Week 7-10 Assignment -->
+  <td><strong>Assignment&nbsp;5</strong>
+  <br>due&nbsp;Apr.&nbsp;9 (tentative)</td>
+  <td><strong>Tagging and Parsing</strong></td>
+  <td><ul>
+  <li>HMMs / Viterbi
+  <li>Parsing / CKY
+  </ul></td>
+  <td>
+  <em>To be released</em>
+  </td>
 </tr>
 <tr><!--- Week 13 -->
   <td><strong>Week&nbsp;13</strong><br>(Apr.&nbsp;10&nbsp;-&nbsp;16)</td>
@@ -445,6 +454,23 @@ We'll update the table below with assignments as they become available, as well 
   <li>Read: <a href="http://www.wildml.com/2015/11/understanding-convolutional-neural-networks-for-nlp/" target="_blank">Understanding Convolutional Neural Networks for NLP</a>
   <li>Read: <a href="https://arxiv.org/abs/1408.5882" target="_blank">Convolutional Neural Networks for Sentence Classification</a>
   </ul></td>     
+</tr>
+<tr><!--- Project Presentations -->
+  <td><strong><a href="../project/#presentations" target="_blank">Project&nbsp;Presentations</a></strong>
+  <br>in-class Apr.&nbsp;24-28</td>
+  <td></td>
+  <td></td>
+  <td><strong><a href="../project/#presentations" target="_blank">Final Project Guidelines</a></strong>
+  </td>
+</tr>
+<tr><!--- Project Reports -->
+  <td><strong><a href="../project/#final-submission" target="_blank">Project&nbsp;Reports</a></strong>
+  <br><strong>due Apr.&nbsp;28<br>(hard deadline)</strong>
+  </td>
+  <td></td>
+  <td></td>
+  <td><strong><a href="../project/#final-submission" target="_blank">Final Project Guidelines</a></strong>
+  </td>
 </tr>
 </table>
 
