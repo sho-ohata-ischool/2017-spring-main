@@ -351,6 +351,7 @@ We'll update the table below with assignments as they become available, as well 
   </ul></td>
   <td><ul>
   <li>Read: <a href="http://www.nltk.org/book_1ed/ch08.html" target="_blank">NLTK book chapter 8 (analyzing sentence structure)</a>
+  <li>Skim: <a href="http://ilpubs.stanford.edu:8091/~klein/unlexicalized-parsing.pdf" target="_blank">Accurate Unlexicalized Parsing</a> (Klein & Manning 2003)
   <li>Play: <a href="http://nlp.stanford.edu:8080/parser/" target="_blank">Stanford parser</a> (online demo)
   </ul>
   <p>
@@ -399,18 +400,6 @@ We'll update the table below with assignments as they become available, as well 
   <li>Skim: <a href="http://www.isi.edu/natural-language/mt/wkbk.rtf" target="_blank">Statistical MT Handbook by Kevin Knight</a>
   </ul></td>
 </tr>
-<tr><!--- Week 7-10 Assignment -->
-  <td><strong>Assignment&nbsp;5</strong>
-  <br>due&nbsp;Apr.&nbsp;9 (tentative)</td>
-  <td><strong>Tagging and Parsing</strong></td>
-  <td><ul>
-  <li>HMMs / Viterbi
-  <li>Parsing / CKY
-  </ul></td>
-  <td>
-  <em>To be released</em>
-  </td>
-</tr>
 <tr><!--- Week 13 -->
   <td><strong>Week&nbsp;13</strong><br>(Apr.&nbsp;10&nbsp;-&nbsp;16)</td>
   <td>Machine Translation II</td>
@@ -425,6 +414,18 @@ We'll update the table below with assignments as they become available, as well 
   <li><em>Optional:</em> <a href="https://arxiv.org/abs/1609.08144" target="_blank">Google’s Neural Machine Translation System</a>
   <li><em>Optional:</em> <a href="http://distill.pub/2016/augmented-rnns/#attentional-interfaces" target="_blank">Attention and Augmented Recurrent Neural Networks</a> (section on “Attentional Interfaces” has an awesome visualization of an MT example, showing alignments)
   </ul></td>
+</tr>
+<tr><!--- Week 7-10 Assignment -->
+  <td><strong><a href="../assignment/a5" target="_blank">Assignment&nbsp;5</a></strong>
+  <br>due&nbsp;Apr.&nbsp;19 (Wednesday)</td>
+  <td><strong>Tagging and Parsing</strong></td>
+  <td><ul>
+  <li>HMMs / Forward-Backward and Viterbi
+  <li>Parsing / CKY
+  </ul></td>
+  <td>
+  <a href="../assignment/a5" target="_blank">Assignment 5</a>
+  </td>
 </tr>
 <tr><!--- Week 14 -->
   <td><strong>Week&nbsp;14</strong><br>(Apr.&nbsp;17&nbsp;-&nbsp;23)</td>
