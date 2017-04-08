@@ -58,7 +58,7 @@ def CKY_apply_preterminal_rules(words, grammar, chart):
     # For the ith token, you should populate cell (i,i+1).
     for i, word in enumerate(words):
         pass
-            return False
+        return False
 
 
 

@@ -44,7 +44,10 @@ class PCFG(object):
         """
         pass
         #### YOUR CODE HERE ####
-
+	for production in parsed_sentence.productions():
+	    lhs = production.lhs()
+	    self.production_counts[production] += 1
+	    self.lhs_counts[lhs] += 1
 
 
         #### END(YOUR CODE) ####
@@ -61,7 +64,10 @@ class PCFG(object):
         self.scored_productions = dict()
 
         #### YOUR CODE HERE ####
-
+	for key in self.production_counts:
+	    numerator = np.log(self.production_counts[key])
+	    denominator = np.log(self.lhs_counts[key.lhs()])
+	    self.scored_productions[key] = numerator - denominator
 
 
         #### END(YOUR CODE) ####
