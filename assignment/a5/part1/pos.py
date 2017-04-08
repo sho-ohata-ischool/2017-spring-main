@@ -118,9 +118,12 @@ class HMM(object):
         #### YOUR CODE HERE ####
         # Iterate through the sentence from left to right.
         for i, w in enumerate(sentence):
-            pass
-
-
+            for t in self.tagset:
+                if i == 0:
+                    alpha[(0, t)] = self.initial[t] + self.emission[t][w]
+                else:
+                    alpha[(i, t)] = logsumexp([self.emission[t][w] + self.transition[t_1][t] + alpha[(i-1, t_1)]
+                        for t_1 in self.tagset])
 
         # Hint:  if you fail the unit tests, print out your alpha here
         #        and check it manually against the tests.
@@ -210,13 +213,21 @@ class HMM(object):
         bp = dict()
 
         #### YOUR CODE HERE ####
-
-
-
-
-
+        for i, w in enumerate(sentence):
+            for t in self.tagset:
+                if i == 0:
+                    delta[(0, t)] = self.initial[t] + self.emission[t][w]
+                    bp[(0,t)] = None
+                    prev_tag = t
+                else:
+                    delta[(i, t)] = logsumexp([self.emission[t][w] + max([self.transition[t_1][t] + delta[(i-1, t_1)]
+                                            for t_1 in self.tagset])])
+                    bp[(i,t)] = prev_tag
+                    prev_tag = t
+                    
 
         #### END(YOUR CODE) ####
+        print bp
 
         return delta, bp
 
