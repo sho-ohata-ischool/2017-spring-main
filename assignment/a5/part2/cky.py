@@ -57,10 +57,14 @@ def CKY_apply_preterminal_rules(words, grammar, chart):
     # Handle preterminal rules A -> a
     # For the ith token, you should populate cell (i,i+1).
     for i, word in enumerate(words):
-        pass
-        return False
+	if (word,) not in grammar.parsing_index:
+	    return False
 
-
+	elif len(grammar.parsing_index[(word,)]) == 1:
+	    pos_tag, score = grammar.parsing_index[(word,)][0]
+    	    chart[(i, i+1)][pos_tag] = ProbabilisticTree(pos_tag, [word], logprob=score)
+	else:
+	    next
 
     #### END(YOUR CODE) ####
     return True
@@ -87,7 +91,8 @@ def CKY_apply_binary_rules(N, grammar, chart):
     for (i, j) in ordered_spans(N):
         for split in xrange(i+1, j):
             # Consider all possible A -> B C
-            pass
+	    pos_tag, score = grammar.parsing_index[(i,j)][0]
+            chart[(i, i+1)][pos_tag] = ProbabilisticTree(pos_tag, [word], logprob=score)
     
     
     
