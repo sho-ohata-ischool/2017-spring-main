@@ -217,14 +217,19 @@ class HMM(object):
             for t in self.tagset:
                 if i == 0:
                     delta[(0, t)] = self.initial[t] + self.emission[t][w]
-                    bp[(0,t)] = None
-                    prev_tag = t
                 else:
-                    delta[(i, t)] = logsumexp([self.emission[t][w] + max([self.transition[t_1][t] + delta[(i-1, t_1)]
-                                            for t_1 in self.tagset])])
-                    bp[(i,t)] = prev_tag
-                    prev_tag = t
-                    
+                    #delta[(i, t)] = logsumexp([self.emission[t][w] + max([self.transition[t_1][t] + delta[(i-1, t_1)]
+                    #                        for t_1 in self.tagset])])
+                    for t_1 in self.tagset:
+                        delta_score = logsumexp(self.emission[t][w] + self.transition[t_1][t] + delta[(i-1, t_1)])
+                        if (i, t) not in delta:
+                            delta[(i, t)] = delta_score
+                            bp[(i, t)] = t_1
+                        elif delta[(i, t)] < delta_score:
+                            delta[(i, t)] = delta_score
+                            bp[(i, t)] = t_1
+                        else:
+                            next
 
         #### END(YOUR CODE) ####
         print bp
