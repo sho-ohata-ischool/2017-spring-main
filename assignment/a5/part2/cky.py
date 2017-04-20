@@ -60,11 +60,10 @@ def CKY_apply_preterminal_rules(words, grammar, chart):
 	if (word,) not in grammar.parsing_index:
 	    return False
 
-	elif len(grammar.parsing_index[(word,)]) == 1:
-	    pos_tag, score = grammar.parsing_index[(word,)][0]
-    	    chart[(i, i+1)][pos_tag] = ProbabilisticTree(pos_tag, [word], logprob=score)
 	else:
-	    next
+	    for x in range(len(grammar.parsing_index[(word,)])):
+	        pos_tag, score = grammar.parsing_index[(word,)][x]
+    	        chart[(i, i+1)][pos_tag] = ProbabilisticTree(pos_tag, [word], logprob=score)
 
     #### END(YOUR CODE) ####
     return True
@@ -91,11 +90,25 @@ def CKY_apply_binary_rules(N, grammar, chart):
     for (i, j) in ordered_spans(N):
         for split in xrange(i+1, j):
             # Consider all possible A -> B C
-	    pos_tag, score = grammar.parsing_index[(i,j)][0]
-            chart[(i, i+1)][pos_tag] = ProbabilisticTree(pos_tag, [word], logprob=score)
-    
-    
-    
+	    for key, value in grammar.parsing_index.iteritems():
+		if len(value) > 1:
+		    for pos_tag, score in value:
+			B = chart[(i, split)][pos_tag]
+		        C = chart[(split, j)][pos_tag]
+
+			if (i,j) not in chart:
+		            old_score = score + B.logprob() + C.logprob()
+		            chart[(i,j)][pos_tag] = ProbabilisticTree(pos_tag, [B, C])
+                	else:
+		            new_score = score + B.logprob() + C.logprob()
+		            if new_score > old_score:
+				old_score = new_score
+                        	chart[(i,j)][pos_tag] = ProbabilisticTree(pos_tag, [B, C])
+		else:
+		    next
+
+
+    print set(chart[(0,2)].keys())
     #### END(YOUR CODE) ####
 
 def CKY(words, grammar, target_type=None):
