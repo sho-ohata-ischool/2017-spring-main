@@ -91,23 +91,19 @@ def CKY_apply_binary_rules(N, grammar, chart):
         for split in xrange(i+1, j):
             # Consider all possible A -> B C
 	    for rule, value in grammar.parsing_index.iteritems():
-	        B = chart[(i, split)][rule]
-		C = chart[(split, j)][rule]
-		for pos_tag, score in value:
-		    #B = chart[(i, split)][rule]
-		    #C = chart[(split, j)][rule]
-		    sum_score = score + B.logprob() + C.logprob()
+		if len(rule) > 1:
+	            B = chart[(i, split)][rule[0]]
+	 	    C = chart[(split, j)][rule[1]]
+		    for pos_tag, score in value:
+		        sum_score = score + B.logprob() + C.logprob()
 
-		    if pos_tag not in chart[(i,j)]:
-			chart[(i,j)][pos_tag] = ProbabilisticTree(pos_tag, [B, C], score=sum_score)
-			#chart[(i,j)][pos_tag] = ProbabilisticTree(pos_tag, [B, C], score=sum_score)
+		        if pos_tag not in chart[(i,j)]:
+			    chart[(i,j)][pos_tag] = ProbabilisticTree(pos_tag, [B, C], logprob=sum_score)
 
-                    else:
-		        if sum_score > chart[(i,j)][pos_tag].logprob():
-                            #chart[(i,j)][pos_tag] = ProbabilisticTree(pos_tag, [B, C], score=sum_score)
-			    chart[(i,j)][pos_tag] = ProbabilisticTree(pos_tag, [B, C], score=sum_score)
+                        else:
+		            if sum_score > chart[(i,j)][pos_tag].logprob():
+			        chart[(i,j)][pos_tag] = ProbabilisticTree(pos_tag, [B, C], logprob=sum_score)
 
-    print set(chart[(0,2)].keys())
     #### END(YOUR CODE) ####
 
 def CKY(words, grammar, target_type=None):
